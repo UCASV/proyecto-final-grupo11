@@ -8,26 +8,24 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\xxhac\\.nuget\\packages\\": {}
+    "C:\\Users\\hp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xxhac\\Desktop\\PROYECTO UCA 2021\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\Proyecto final\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
       "projectName": "PROYECTO FINAL POO Y BD",
-      "projectPath": "C:\\Users\\xxhac\\Desktop\\PROYECTO UCA 2021\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
-      "packagesPath": "C:\\Users\\xxhac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xxhac\\Desktop\\PROYECTO UCA 2021\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD\\obj\\",
+      "projectPath": "C:\\Users\\hp\\Desktop\\Proyecto final\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\Proyecto final\\PROYECTO FINAL POO Y BD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xxhac\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -63,7 +61,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

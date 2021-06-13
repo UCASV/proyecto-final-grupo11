@@ -11,6 +11,9 @@
       <Compile Update="frmProcesoCita.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="FormMenu.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

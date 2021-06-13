@@ -17,3 +17,22 @@ C:\Users\xxhac\Desktop\PROYECTO UCA 2021\PROYECTO FINAL POO Y BD\PROYECTO FINAL 
 C:\Users\xxhac\Desktop\PROYECTO UCA 2021\PROYECTO FINAL POO Y BD\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.Form1.resources
 C:\Users\xxhac\Desktop\PROYECTO UCA 2021\PROYECTO FINAL POO Y BD\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.csproj.GenerateResource.cache
 C:\Users\xxhac\Desktop\PROYECTO UCA 2021\PROYECTO FINAL POO Y BD\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.frmProcesoCita.resources
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.exe
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.deps.json
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.runtimeconfig.json
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.runtimeconfig.dev.json
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.dll
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\ref\PROYECTO FINAL POO Y BD.dll
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.pdb
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.Form1.resources
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.frmProcesoCita.resources
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.csproj.GenerateResource.cache
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.AssemblyInfo.cs
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.dll
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\ref\PROYECTO FINAL POO Y BD.dll
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.pdb
+C:\Users\hp\Desktop\Proyecto final\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.genruntimeconfig.cache

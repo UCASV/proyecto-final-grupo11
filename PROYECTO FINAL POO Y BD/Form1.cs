@@ -16,5 +16,15 @@ namespace PROYECTO_FINAL_POO_Y_BD
         {
             InitializeComponent();
         }
+
+        private void btn_send_Click(object sender, EventArgs e)
+        {
+           
+              frmProcesoCita window1 = new frmProcesoCita();
+              window1.Show();
+              this.Hide();
+              
+
+        }
     }
 }

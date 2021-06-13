@@ -17,7 +17,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmProcesoCita());
+            Application.Run(new Form1());
         }
     }
 }
