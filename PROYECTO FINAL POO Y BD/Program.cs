@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PROYECTO_FINAL_POO_Y_BD
+namespace PROYECTO_FINAL_POO_Y_BD.Controllers
 {
     static class Program
     {

@@ -167,8 +167,8 @@
         }
 
         private System.Windows.Forms.Button btn_send;
-        private System.Windows.Forms.TextBox textBox_username;
-        private System.Windows.Forms.TextBox textBox_password;
+        public System.Windows.Forms.TextBox textBox_username;
+        public System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.Label lbl_forgot;
 
         private System.Windows.Forms.Button button1;
