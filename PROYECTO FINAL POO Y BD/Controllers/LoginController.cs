@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Windows.Forms;
-using PROYECTO_FINAL_POO_Y_BD.CabinasContext;
+using PROYECTO_FINAL_POO_Y_BD.CabinContext;
 
 namespace PROYECTO_FINAL_POO_Y_BD
 {
@@ -9,17 +9,17 @@ namespace PROYECTO_FINAL_POO_Y_BD
         
         public void CloseForm(string user, string password, Form1 form1)
         {
-            CabinasDeVacunacionCovidDBContext db = new CabinasDeVacunacionCovidDBContext();
+            var db = new CabinasDeVacunacionCovidDBContext();
 
-            var empleados = db.Empleados
+            var employee = db.Employees
                 .OrderBy(e => e.Id)
                 .ToList();
-            var empleadoFound = empleados.Where(
-                u => u.Usuario.Equals(user) && 
-                     u.Contraseña.Equals(password)
+            var employeeFound = employee.Where(
+                u => u.UserEmployee.Equals(user) && 
+                     u.PasswordEmployee.Equals(password)
                      ).ToList();
 
-            if (empleadoFound.Count() == 0)
+            if (employeeFound.Count() == 0)
             {
                 MessageBox.Show("Usuario invalido o contraseña incorrecta", "Inicio Sesion", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
