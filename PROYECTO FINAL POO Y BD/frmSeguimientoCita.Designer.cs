@@ -45,9 +45,10 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-106, -56);
+            this.pictureBox1.Location = new System.Drawing.Point(-141, -69);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(823, 647);
+            this.pictureBox1.Size = new System.Drawing.Size(1097, 796);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -59,9 +60,10 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(122, 7);
+            this.panel1.Location = new System.Drawing.Point(163, 9);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(358, 468);
+            this.panel1.Size = new System.Drawing.Size(477, 576);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -74,51 +76,58 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(121, 120);
+            this.button1.Location = new System.Drawing.Point(161, 148);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 29);
+            this.button1.Size = new System.Drawing.Size(127, 36);
             this.button1.TabIndex = 3;
             this.button1.Text = "Verificar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnVerificar_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 94);
+            this.textBox1.Location = new System.Drawing.Point(123, 116);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
+            this.textBox1.Size = new System.Drawing.Size(205, 22);
             this.textBox1.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(121, 71);
+            this.label2.Location = new System.Drawing.Point(161, 87);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.Size = new System.Drawing.Size(140, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Numero de DUI:";
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(3, 2);
+            this.label1.Location = new System.Drawing.Point(4, 2);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 59);
+            this.label1.Size = new System.Drawing.Size(473, 73);
             this.label1.TabIndex = 0;
             this.label1.Text = "Seguimiento de cita";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmSeguimientoCita
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 478);
+            this.ClientSize = new System.Drawing.Size(795, 588);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmSeguimientoCita";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSeguimientoCita";
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
