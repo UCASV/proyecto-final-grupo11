@@ -14,7 +14,14 @@ namespace PROYECTO_FINAL_POO_Y_BD
         {
             frmProcesoCita window = new frmProcesoCita();
                 window.Show();
-                this.Hide();
+                
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmSeguimientoCita win2 = new frmSeguimientoCita();
+            win2.Show();
+            
         }
     }
 }

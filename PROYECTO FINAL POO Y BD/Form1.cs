@@ -20,7 +20,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private void btn_send_Click(object sender, EventArgs e)
         {
 
-            if (textBox_username.Text == "" && textBox_password.Text == "")
+            if (textBox_username.Text == "" || textBox_password.Text == "")
             {
                 MessageBox.Show("Usuario invalido o contraseña incorrecta", "Inicio Sesion", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);

@@ -87,7 +87,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.tableLayoutPanel1.Controls.Add(this.lblIdentificador, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.lblNumeroIdentificador, 1, 8);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 141);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.37527F));
@@ -109,7 +109,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.txtNumeroIdentificador_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNumeroIdentificador_Usuario.Location = new System.Drawing.Point(215, 326);
-            this.txtNumeroIdentificador_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumeroIdentificador_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumeroIdentificador_Usuario.Name = "txtNumeroIdentificador_Usuario";
             this.txtNumeroIdentificador_Usuario.Size = new System.Drawing.Size(163, 20);
             this.txtNumeroIdentificador_Usuario.TabIndex = 18;
@@ -123,7 +123,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.cmbIdentificador_Usuario.FormattingEnabled = true;
             this.cmbIdentificador_Usuario.Items.AddRange(new object[] {"Ninguno", "Educacion", "Salud", "Policia Nacional Civil", "Gobierno", "Fuerza Armada", "Periodismo"});
             this.cmbIdentificador_Usuario.Location = new System.Drawing.Point(215, 289);
-            this.cmbIdentificador_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIdentificador_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIdentificador_Usuario.Name = "cmbIdentificador_Usuario";
             this.cmbIdentificador_Usuario.Size = new System.Drawing.Size(163, 21);
             this.cmbIdentificador_Usuario.TabIndex = 19;
@@ -134,7 +134,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.txtEnfermedades_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEnfermedades_Usuario.Location = new System.Drawing.Point(215, 248);
-            this.txtEnfermedades_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEnfermedades_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtEnfermedades_Usuario.Multiline = true;
             this.txtEnfermedades_Usuario.Name = "txtEnfermedades_Usuario";
             this.txtEnfermedades_Usuario.Size = new System.Drawing.Size(163, 37);
@@ -145,7 +145,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.txtCorreo_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCorreo_Usuario.Location = new System.Drawing.Point(215, 207);
-            this.txtCorreo_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo_Usuario.Name = "txtCorreo_Usuario";
             this.txtCorreo_Usuario.Size = new System.Drawing.Size(163, 20);
             this.txtCorreo_Usuario.TabIndex = 15;
@@ -155,7 +155,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.txtTelefono_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefono_Usuario.Location = new System.Drawing.Point(215, 166);
-            this.txtTelefono_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono_Usuario.Name = "txtTelefono_Usuario";
             this.txtTelefono_Usuario.Size = new System.Drawing.Size(163, 20);
             this.txtTelefono_Usuario.TabIndex = 14;
@@ -165,7 +165,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.txtDireccion_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccion_Usuario.Location = new System.Drawing.Point(215, 125);
-            this.txtDireccion_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion_Usuario.Name = "txtDireccion_Usuario";
             this.txtDireccion_Usuario.Size = new System.Drawing.Size(163, 20);
             this.txtDireccion_Usuario.TabIndex = 13;
@@ -175,7 +175,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.txtNombre_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre_Usuario.Location = new System.Drawing.Point(215, 84);
-            this.txtNombre_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre_Usuario.Name = "txtNombre_Usuario";
             this.txtNombre_Usuario.Size = new System.Drawing.Size(163, 20);
             this.txtNombre_Usuario.TabIndex = 12;
@@ -185,7 +185,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.txtFechaNacimiento_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFechaNacimiento_Usuario.Location = new System.Drawing.Point(215, 43);
-            this.txtFechaNacimiento_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFechaNacimiento_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtFechaNacimiento_Usuario.Name = "txtFechaNacimiento_Usuario";
             this.txtFechaNacimiento_Usuario.Size = new System.Drawing.Size(163, 20);
             this.txtFechaNacimiento_Usuario.TabIndex = 20;
@@ -194,7 +194,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.txtDUI_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDUI_Usuario.Location = new System.Drawing.Point(215, 2);
-            this.txtDUI_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDUI_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtDUI_Usuario.Name = "txtDUI_Usuario";
             this.txtDUI_Usuario.Size = new System.Drawing.Size(163, 20);
             this.txtDUI_Usuario.TabIndex = 11;
@@ -325,7 +325,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnCancelarCita.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancelarCita.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelarCita.Location = new System.Drawing.Point(77, 513);
-            this.btnCancelarCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarCita.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarCita.Name = "btnCancelarCita";
             this.btnCancelarCita.Size = new System.Drawing.Size(184, 53);
             this.btnCancelarCita.TabIndex = 9;
@@ -341,7 +341,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnAgendarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnAgendarCita.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgendarCita.Location = new System.Drawing.Point(296, 513);
-            this.btnAgendarCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgendarCita.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgendarCita.Name = "btnAgendarCita";
             this.btnAgendarCita.Size = new System.Drawing.Size(184, 53);
             this.btnAgendarCita.TabIndex = 10;
@@ -372,7 +372,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnVerificar02.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnVerificar02.ForeColor = System.Drawing.Color.White;
             this.btnVerificar02.Location = new System.Drawing.Point(409, 406);
-            this.btnVerificar02.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerificar02.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerificar02.Name = "btnVerificar02";
             this.btnVerificar02.Size = new System.Drawing.Size(70, 22);
             this.btnVerificar02.TabIndex = 12;
@@ -389,7 +389,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
             this.btnSeleccionar.Location = new System.Drawing.Point(409, 430);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(80, 23);
             this.btnSeleccionar.TabIndex = 13;
@@ -402,7 +402,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(224, 38);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(96, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -423,8 +423,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.Controls.Add(this.btnAgendarCita);
             this.Controls.Add(this.btnCancelarCita);
             this.Controls.Add(this.label10);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmProcesoCita";

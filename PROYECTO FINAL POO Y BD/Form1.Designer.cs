@@ -31,18 +31,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_username = new System.Windows.Forms.TextBox();
-            this.textBox_password = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_send = new System.Windows.Forms.Button();
             this.lbl_forgot = new System.Windows.Forms.Label();
+            this.btn_send = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_password = new System.Windows.Forms.TextBox();
+            this.textBox_username = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,25 +62,65 @@
             this.panel1.Size = new System.Drawing.Size(741, 477);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // lbl_forgot
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-44, -20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(833, 507);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.lbl_forgot.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl_forgot.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_forgot.Location = new System.Drawing.Point(515, 334);
+            this.lbl_forgot.Name = "lbl_forgot";
+            this.lbl_forgot.Size = new System.Drawing.Size(128, 13);
+            this.lbl_forgot.TabIndex = 9;
+            this.lbl_forgot.Text = "Olvide mi contraseña";
+            this.lbl_forgot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
+            // btn_send
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(423, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(194, 116);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.btn_send.BackColor = System.Drawing.Color.White;
+            this.btn_send.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (128)))), ((int) (((byte) (255)))), ((int) (((byte) (255)))));
+            this.btn_send.FlatAppearance.BorderSize = 2;
+            this.btn_send.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (128)))), ((int) (((byte) (255)))), ((int) (((byte) (255)))));
+            this.btn_send.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (128)))), ((int) (((byte) (255)))), ((int) (((byte) (255)))));
+            this.btn_send.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_send.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_send.Location = new System.Drawing.Point(396, 322);
+            this.btn_send.Name = "btn_send";
+            this.btn_send.Size = new System.Drawing.Size(89, 25);
+            this.btn_send.TabIndex = 8;
+            this.btn_send.Text = "Iniciar";
+            this.btn_send.UseVisualStyleBackColor = false;
+            this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label3.Location = new System.Drawing.Point(396, 265);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Contraseña";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label2.Location = new System.Drawing.Point(396, 209);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Usuario";
+            // 
+            // textBox_password
+            // 
+            this.textBox_password.Location = new System.Drawing.Point(396, 281);
+            this.textBox_password.Name = "textBox_password";
+            this.textBox_password.Size = new System.Drawing.Size(247, 20);
+            this.textBox_password.TabIndex = 5;
+            // 
+            // textBox_username
+            // 
+            this.textBox_username.Location = new System.Drawing.Point(396, 225);
+            this.textBox_username.Name = "textBox_username";
+            this.textBox_username.Size = new System.Drawing.Size(247, 20);
+            this.textBox_username.TabIndex = 4;
             // 
             // label1
             // 
@@ -94,61 +134,25 @@
             this.label1.Text = "Iniciar sesión";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox_username
+            // pictureBox2
             // 
-            this.textBox_username.Location = new System.Drawing.Point(396, 225);
-            this.textBox_username.Name = "textBox_username";
-            this.textBox_username.Size = new System.Drawing.Size(247, 20);
-            this.textBox_username.TabIndex = 4;
+            this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(423, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(194, 116);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
-            // textBox_password
+            // pictureBox1
             // 
-            this.textBox_password.Location = new System.Drawing.Point(396, 281);
-            this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(247, 20);
-            this.textBox_password.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(396, 209);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Usuario";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label3.Location = new System.Drawing.Point(396, 265);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Contraseña";
-            // 
-            // btn_send
-            // 
-            this.btn_send.BackColor = System.Drawing.Color.Aquamarine;
-            this.btn_send.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_send.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btn_send.Location = new System.Drawing.Point(394, 323);
-            this.btn_send.Name = "btn_send";
-            this.btn_send.Size = new System.Drawing.Size(76, 24);
-            this.btn_send.TabIndex = 8;
-            this.btn_send.Text = "Iniciar";
-            this.btn_send.UseVisualStyleBackColor = false;
-            this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
-            // 
-            // lbl_forgot
-            // 
-            this.lbl_forgot.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lbl_forgot.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_forgot.Location = new System.Drawing.Point(515, 334);
-            this.lbl_forgot.Name = "lbl_forgot";
-            this.lbl_forgot.Size = new System.Drawing.Size(128, 13);
-            this.lbl_forgot.TabIndex = 9;
-            this.lbl_forgot.Text = "Olvide mi contraseña";
-            this.lbl_forgot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-44, -20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(833, 507);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -156,13 +160,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 473);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
         }
 
