@@ -39,10 +39,10 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 txtTelefono_Usuario.Visible = true;
                 lblCorreo.Visible = true;
                 txtCorreo_Usuario.Visible = true;
-                lblEnfermedades.Visible = true;
-                txtEnfermedades_Usuario.Visible = true;
                 btnVerificarDUI.Visible = false;
                 btnVerificar02.Visible = true;
+                label1.Visible = true;
+                cmbEnfermedades.Visible=true;
             }
             else
             {
@@ -58,8 +58,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             
             
             if (txtNombre_Usuario.Text == "" || txtDireccion_Usuario.Text == "" || txtTelefono_Usuario.Text == "" ||
-                txtCorreo_Usuario.Text == ""
-                || txtEnfermedades_Usuario.Text == "")
+                txtCorreo_Usuario.Text == "" || cmbEnfermedades.SelectedItem==null)
             {
                 MessageBox.Show("Verifique que los campos no esten vacios", "Proceso de Cita", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -67,17 +66,34 @@ namespace PROYECTO_FINAL_POO_Y_BD
             }
             else
             {
-               
-                lblIdentificador.Visible = true;
-                cmbIdentificador_Usuario.Visible = true;
-                btnVerificar02.Visible = false;
-                btnSeleccionar.Visible = true;
-                txtNombre_Usuario.Enabled = false;
-                txtDireccion_Usuario.Enabled = false;
-                txtTelefono_Usuario.Enabled = false;
-                txtCorreo_Usuario.Enabled = false;
-                txtEnfermedades_Usuario.Enabled = false;
+                if (cmbEnfermedades.SelectedItem == "Otra")
+                {
+                    txtEnfermedades_Usuario.Visible = true;
+                    lblEnfermedades.Visible = true;
+                    txtEnfermedades_Usuario.Enabled = true;
+                    btnVerificar03.Visible = true;
+                    txtNombre_Usuario.Enabled = false;
+                    txtDireccion_Usuario.Enabled = false;
+                    txtTelefono_Usuario.Enabled = false;
+                    txtCorreo_Usuario.Enabled = false;
+                    cmbEnfermedades.Enabled = false;
+                    btnVerificar02.Visible = false;
+                }
+                else
+                {
+                    txtEnfermedades_Usuario.Enabled = false;
+                    lblIdentificador.Visible = true;
+                    cmbIdentificador_Usuario.Visible = true;
+                    btnVerificar02.Visible = false;
+                    btnSeleccionar.Visible = true;
+                    txtNombre_Usuario.Enabled = false;
+                    txtDireccion_Usuario.Enabled = false;
+                    txtTelefono_Usuario.Enabled = false;
+                    txtCorreo_Usuario.Enabled = false;
+                    cmbEnfermedades.Enabled = false;
+                }
             }
+          
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
@@ -97,12 +113,35 @@ namespace PROYECTO_FINAL_POO_Y_BD
             }
             else
             {
-                lblNumeroIdentificador.Visible = true;
-                txtNumeroIdentificador_Usuario.Visible = true;
+               
                 btnAgendarCita.Enabled = true;
                 btnSeleccionar.Visible = false;
             }
         
+        }
+
+        private void btnVerificar03_Click(object sender, EventArgs e)
+        {
+            if (txtEnfermedades_Usuario.Text == "")
+            {
+                MessageBox.Show("Debe llenar el campo de enfermedad a especificar", "Proceso de Cita",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                txtEnfermedades_Usuario.Enabled = false;
+                lblIdentificador.Visible = true;
+                cmbIdentificador_Usuario.Visible = true;
+                btnVerificar02.Visible = false;
+                btnSeleccionar.Visible = true;
+                txtNombre_Usuario.Enabled = false;
+                txtDireccion_Usuario.Enabled = false;
+                txtTelefono_Usuario.Enabled = false;
+                txtCorreo_Usuario.Enabled = false;
+                cmbEnfermedades.Enabled = false;
+                btnVerificar03.Visible = false;
+
+            }
         }
     }
 }
