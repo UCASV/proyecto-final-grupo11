@@ -40,12 +40,12 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-13, -12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(861, 480);
+            this.pictureBox1.Size = new System.Drawing.Size(875, 481);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -56,9 +56,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(186, 340);
+            this.button1.Location = new System.Drawing.Point(181, 318);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 26);
+            this.button1.Size = new System.Drawing.Size(132, 36);
             this.button1.TabIndex = 1;
             this.button1.Text = "Reservar cita";
             this.button1.UseVisualStyleBackColor = false;
@@ -72,9 +72,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button3.Location = new System.Drawing.Point(75, 340);
+            this.button3.Location = new System.Drawing.Point(56, 318);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 26);
+            this.button3.Size = new System.Drawing.Size(130, 36);
             this.button3.TabIndex = 3;
             this.button3.Text = "Gestionar citas";
             this.button3.UseVisualStyleBackColor = false;
@@ -84,7 +84,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 480);
+            this.ClientSize = new System.Drawing.Size(839, 445);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -97,11 +97,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.PictureBox pictureBox1;
+
         private System.Windows.Forms.Button button3;
 
         private System.Windows.Forms.Button button1;
-
-        private System.Windows.Forms.PictureBox pictureBox1;
 
         #endregion
     }
