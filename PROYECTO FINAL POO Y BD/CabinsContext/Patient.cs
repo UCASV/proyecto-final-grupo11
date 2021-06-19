@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
+namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
 {
     public partial class Patient
     {
@@ -12,6 +12,7 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
             Appointments = new HashSet<Appointment>();
         }
 
+        public string NamePatient { get; set; }
         public string Dui { get; set; }
         public string Telephone { get; set; }
         public string Mail { get; set; }
