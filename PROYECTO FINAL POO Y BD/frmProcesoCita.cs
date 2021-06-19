@@ -23,8 +23,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
             
             var formatoDUI="^[0-9]{8}-[0-9]{1}$";
             if ( Regex.IsMatch(txtDUI_Usuario.Text,formatoDUI) &&  
-                 (2021-Convert.ToInt32(txtFechaNacimiento_Usuario.Text)>18 ) && txtFechaNacimiento_Usuario.Text!=" " 
-            && txtDUI_Usuario.Text!= " ")
+                 (2021-Convert.ToInt32(txtFechaNacimiento_Usuario.Text)>17 ) && txtFechaNacimiento_Usuario.Text!=" " 
+            && txtDUI_Usuario.Text!= " " &&  (2021-Convert.ToInt32(txtFechaNacimiento_Usuario.Text)<101 ) )
             {
                 //SI EL DUI ESTA CORRECTO Y LA FECHA TAMBIEN SE MUESTRAN LOS DEMAS ELEMENTOS
                 txtDUI_Usuario.Enabled = false;
@@ -33,10 +33,12 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 cmbDepartamento.Visible = true;
                 btnVerificarDUI.Visible = false;
                 btnvalidar04.Visible = true;
+                l3abel3.Visible = false;
+
             }
             else
             {
-                MessageBox.Show("Formato de DUI invalido o Fecha de nacimiento ingresada es menor a 18 años", "Proceso de Cita", MessageBoxButtons.OK,
+                MessageBox.Show("Verifique que el DUI y fecha de nacimiento sean correctos", "Proceso de Cita", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
             }
@@ -109,7 +111,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             }
             else
             {
-                MessageBox.Show("Verifique que los campos no esten vacios", "Proceso de Cita", MessageBoxButtons.OK,
+                MessageBox.Show("Verifique que los datos esten correctos o no esten vacios", "Proceso de Cita", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
             }
@@ -165,5 +167,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             }
         }
 
+      
     }
 }
