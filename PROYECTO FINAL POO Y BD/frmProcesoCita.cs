@@ -167,6 +167,10 @@ namespace PROYECTO_FINAL_POO_Y_BD
             }
         }
 
-      
+
+        private void btnCancelarCita_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

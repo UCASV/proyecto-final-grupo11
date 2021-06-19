@@ -40,6 +40,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-13, -12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);

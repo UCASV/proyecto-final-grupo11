@@ -33,7 +33,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProcesoCita));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtFechaNacimiento_Usuario = new System.Windows.Forms.TextBox();
             this.txtDUI_Usuario = new System.Windows.Forms.TextBox();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
@@ -74,7 +73,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.75F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.75F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.txtFechaNacimiento_Usuario, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtDUI_Usuario, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblFechaNacimiento, 1, 1);
@@ -112,17 +110,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 416);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Location = new System.Drawing.Point(2, 369);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 47);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Año de nacimiento:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtFechaNacimiento_Usuario
             // 
@@ -380,6 +367,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnCancelarCita.TabIndex = 9;
             this.btnCancelarCita.Text = "Cancelar";
             this.btnCancelarCita.UseVisualStyleBackColor = false;
+            this.btnCancelarCita.Click += new System.EventHandler(this.btnCancelarCita_Click);
             // 
             // btnAgendarCita
             // 
@@ -537,7 +525,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private System.Windows.Forms.Label l3abel3;
 
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
 
         private System.Windows.Forms.ComboBox cmbMunicipios;
