@@ -202,3 +202,64 @@ C:\Users\hp\Desktop\Nueva carpeta\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windo
 C:\Users\xxhac\Desktop\PROYECTO UCA 2021\PROYECTO_POO_BD\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.frmSeguimientoCita.resources
 >>>>>>> 70b5bd135328e69d2d4494a4f9a7b6a21cebfa95
 C:\Users\jdp49\OneDrive\Escritorio\Proyect\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.frmSeguimientoCita.resources
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.exe
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.deps.json
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.runtimeconfig.json
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.runtimeconfig.dev.json
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\ref\PROYECTO FINAL POO Y BD.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.pdb
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Humanizer.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.Form1.resources
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.FormMenu.resources
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.frmProcesoCita.resources
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.frmSeguimientoCita.resources
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.csproj.GenerateResource.cache
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.AssemblyInfo.cs
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.csproj.CopyComplete
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\ref\PROYECTO FINAL POO Y BD.dll
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.pdb
+C:\Users\hp\Desktop\xdxdxdxdxd\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.genruntimeconfig.cache
