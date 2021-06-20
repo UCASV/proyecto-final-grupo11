@@ -104,12 +104,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private void btnVerificar02_Click(object sender, EventArgs e)
         {
-            //cargando combobox de las instituciones
-            var db = new CabinasDeVacunacionCovidDBContext();
-            cmbIdentificador_Usuario.DataSource = db.Institutions;
-            cmbIdentificador_Usuario.DisplayMember = "Institution1";
-            cmbIdentificador_Usuario.ValueMember = "Id";
-
+            
             Chronicdisease chref = (Chronicdisease) cmbEnfermedades.SelectedItem;
 
             var formatoTelefono = "^[0-9]{8}$";
@@ -129,7 +124,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     txtNombre_Usuario.Enabled = false;
                     txtTelefono_Usuario.Enabled = false;
                     txtCorreo_Usuario.Enabled = false;
-                    cmbEnfermedades.Enabled = false;
+                    cmbEnfermedades.Enabled = true;
                     btnVerificar02.Visible = false;
                     cmbMunicipios.Enabled = false;
                     txtDireccionCasa.Enabled = false;
@@ -149,6 +144,13 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     cmbMunicipios.Enabled = false;
                     cmbEnfermedades.Enabled = false;
                     txtDireccionCasa.Enabled = false;
+                    
+                    //cargando combobox de las instituciones
+                    var db = new CabinasDeVacunacionCovidDBContext();
+                    cmbIdentificador_Usuario.DataSource = db.Institutions;
+                    cmbIdentificador_Usuario.DisplayMember = "Institution1";
+                    cmbIdentificador_Usuario.ValueMember = "Id";
+
                 }
 
             }
@@ -159,22 +161,18 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     MessageBoxIcon.Information);
 
             }
-
-
-
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            var db = new CabinasDeVacunacionCovidDBContext();
-            Institution insref = (Institution) cmbIdentificador_Usuario.SelectedItem;
+            //var db = new CabinasDeVacunacionCovidDBContext();
             cmbIdentificador_Usuario.Enabled = false;
-
-            if (insref.Institution1 == "Ninguna")
+            var insref = cmbIdentificador_Usuario.Text;
+            
+            if (insref == "Ninguna")
             {
                 btnAgendarCita.Enabled = true;
             }
-
             else if (cmbIdentificador_Usuario.SelectedItem == null)
             {
                 MessageBox.Show("Debe seleccionar una institucion escencial", "Proceso de Cita", MessageBoxButtons.OK,
@@ -183,11 +181,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             }
             else
             {
-
                 btnAgendarCita.Enabled = true;
                 btnSeleccionar.Visible = false;
             }
-
         }
 
         private void btnVerificar03_Click(object sender, EventArgs e)
@@ -220,6 +216,12 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 db.SaveChanges();
                 MessageBox.Show("Enfermedad guardada con exito", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                //cargando combobox de emfermedades
+                cmbEnfermedades.DataSource = db.Chronicdiseases.ToList();
+                cmbEnfermedades.DisplayMember = "Disease";
+                cmbEnfermedades.ValueMember = "Id";
+                btnVerificar02.Visible = true;
+                cmbEnfermedades.Enabled = true;
             }
         }
 
@@ -256,8 +258,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
                //faalta terminar aun la logica para el almacenado 
                //hay ver el porque de las execciones y ver la amnera corecta de gusradar los datos ya que eso esta causando problemas 
                //por la colleciones o lista que se crean en el context 
-                
-                Patient = new Patient(nameUser, dui, telephone, mail, address, )
+
+               //Patient uno = new Patient(nameUser, dui, telephone, mail, address);
+               //Patient uno = new Patient()
 
             }
         
