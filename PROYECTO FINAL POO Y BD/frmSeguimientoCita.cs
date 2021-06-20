@@ -35,9 +35,16 @@ namespace PROYECTO_FINAL_POO_Y_BD
             {
                 MessageBox.Show("Formato de DUI incorrecto", "Seguimiento de Cita", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-        }
+}
         }
 
-       
+
+        
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+             frmAddVaccine win2 = new frmAddVaccine();
+              win2.ShowDialog();                      
+        }
     }
 }

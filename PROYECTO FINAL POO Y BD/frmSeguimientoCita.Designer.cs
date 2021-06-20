@@ -34,7 +34,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSeguimientoCita));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label3);
@@ -77,20 +77,21 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.panel1.Size = new System.Drawing.Size(587, 602);
             this.panel1.TabIndex = 1;
             // 
-            // button4
+            // btnEditar
             // 
-            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(315, 558);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(241, 41);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Editar cita";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnEditar.FlatAppearance.BorderSize = 2;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(324, 549);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(241, 41);
+            this.btnEditar.TabIndex = 9;
+            this.btnEditar.Text = "Editar cita";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // button2
             // 
@@ -100,7 +101,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(27, 558);
+            this.button2.Location = new System.Drawing.Point(15, 548);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(241, 41);
             this.button2.TabIndex = 8;
@@ -113,7 +114,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 197);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(584, 361);
+            this.dataGridView1.Size = new System.Drawing.Size(584, 345);
             this.dataGridView1.TabIndex = 7;
             // 
             // label3
@@ -213,6 +214,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btnEditar;
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
