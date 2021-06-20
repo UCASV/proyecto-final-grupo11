@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
+namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
 {
     public partial class Departament
     {

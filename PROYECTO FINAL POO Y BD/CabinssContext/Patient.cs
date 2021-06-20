@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
+namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
 {
     public partial class Patient
     {
@@ -12,9 +12,9 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
             Appointments = new HashSet<Appointment>();
         }
 
-        public string NamePatient { get; set; }
         public string Dui { get; set; }
         public string Telephone { get; set; }
+        public string NamePatient { get; set; }
         public string Mail { get; set; }
         public string AddressPatient { get; set; }
         public int IdInstitution { get; set; }
@@ -26,20 +26,16 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
         public virtual Municipality IdMunicipalityNavigation { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; }
 
-        public Patient(string namePatient, string dui, string telephone, string mail, string addressPatient, int idInstitution, int idChronicdiseases, int idMunicipality, Chronicdisease idChronicdiseasesNavigation, Institution idInstitutionNavigation, Municipality idMunicipalityNavigation)
+        public Patient(string dui, string telephone, string namePatient, string mail, string addressPatient, Chronicdisease idChronicdiseasesNavigation, Institution idInstitutionNavigation, Municipality idMunicipalityNavigation)
         {
-            NamePatient = namePatient;
             Dui = dui;
             Telephone = telephone;
+            NamePatient = namePatient;
             Mail = mail;
             AddressPatient = addressPatient;
-            IdInstitution = idInstitution;
-            IdChronicdiseases = idChronicdiseases;
-            IdMunicipality = idMunicipality;
             IdChronicdiseasesNavigation = idChronicdiseasesNavigation;
             IdInstitutionNavigation = idInstitutionNavigation;
             IdMunicipalityNavigation = idMunicipalityNavigation;
-            
         }
     }
 }

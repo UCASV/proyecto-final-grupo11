@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using PROYECTO_FINAL_POO_Y_BD.CabinContext;
-using PROYECTO_FINAL_POO_Y_BD.CabinContext;
+using PROYECTO_FINAL_POO_Y_BD.CabinssContext;
+using PROYECTO_FINAL_POO_Y_BD.CabinssContext;
 
 namespace PROYECTO_FINAL_POO_Y_BD
 {
@@ -147,7 +147,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     
                     //cargando combobox de las instituciones
                     var db = new CabinasDeVacunacionCovidDBContext();
-                    cmbIdentificador_Usuario.DataSource = db.Institutions;
+                    cmbIdentificador_Usuario.DataSource = db.Institutions.ToList();
                     cmbIdentificador_Usuario.DisplayMember = "Institution1";
                     cmbIdentificador_Usuario.ValueMember = "Id";
 
@@ -167,9 +167,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
         {
             //var db = new CabinasDeVacunacionCovidDBContext();
             cmbIdentificador_Usuario.Enabled = false;
-            var insref = cmbIdentificador_Usuario.Text;
+            Institution intref = (Institution) cmbIdentificador_Usuario.SelectedItem;
             
-            if (insref == "Ninguna")
+            if (intref.Institution1 == "Ninguna")
             {
                 btnAgendarCita.Enabled = true;
             }
@@ -232,37 +232,26 @@ namespace PROYECTO_FINAL_POO_Y_BD
         }
 
         
-        
-            private void btnAgendarCita_Click(object sender, EventArgs e)
+
+            private void btnAgendarCita_Click_1(object sender, EventArgs e)
             {
                 var db = new CabinasDeVacunacionCovidDBContext();
-
                 string dui = txtDUI_Usuario.Text;
                 string mail = txtCorreo_Usuario.Text;
                 string telephone = txtTelefono_Usuario.Text;
                 string nameUser = txtNombre_Usuario.Text;
-                string disease = txtEnfermedades_Usuario.Text;
                 string address = txtDireccionCasa.Text;
-
                 Institution intref = (Institution) cmbIdentificador_Usuario.SelectedItem;
                 Municipality muniref = (Municipality) cmbMunicipios.SelectedItem;
+                Chronicdisease chref = (Chronicdisease) cmbEnfermedades.SelectedItem;
+                
+                //error no guarda correctamente
+                Patient patient = new Patient(dui,telephone , nameUser, mail, address, chref, intref, muniref);
 
-                var diseases = db.Chronicdiseases
-                    .Where(u => u.Disease == disease)
-                    .ToList();
-
-                if (txtEnfermedades_Usuario.Text == "")
-                {
-                    Chronicdisease disref = (Chronicdisease)cmbEnfermedades.SelectedItem;
-                }
-               //faalta terminar aun la logica para el almacenado 
-               //hay ver el porque de las execciones y ver la amnera corecta de gusradar los datos ya que eso esta causando problemas 
-               //por la colleciones o lista que se crean en el context 
-
-               //Patient uno = new Patient(nameUser, dui, telephone, mail, address);
-               //Patient uno = new Patient()
-
+                db.Add(patient);
+                db.SaveChanges();
+                
+                MessageBox.Show("Datos de paciente guardados con exito", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        
     }
 }

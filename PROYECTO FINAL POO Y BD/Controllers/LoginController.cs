@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Windows.Forms;
-using PROYECTO_FINAL_POO_Y_BD.CabinContext;
+using PROYECTO_FINAL_POO_Y_BD.CabinssContext;
 
 
 namespace PROYECTO_FINAL_POO_Y_BD
