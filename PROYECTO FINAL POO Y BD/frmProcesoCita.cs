@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using PROYECTO_FINAL_POO_Y_BD.CabinsContext;
 
 namespace PROYECTO_FINAL_POO_Y_BD
 {
@@ -13,18 +15,18 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
-      
+
 
         private void btnVerificarDUI_Click(object sender, EventArgs e)
         {
-            
-            var formatoDUI="^[0-9]{8}-[0-9]{1}$";
-            if ( Regex.IsMatch(txtDUI_Usuario.Text,formatoDUI) &&  
-                 (2021-Convert.ToInt32(txtFechaNacimiento_Usuario.Text)>17 ) && txtFechaNacimiento_Usuario.Text!=" " 
-            && txtDUI_Usuario.Text!= " " &&  (2021-Convert.ToInt32(txtFechaNacimiento_Usuario.Text)<101 ) )
+
+            var formatoDUI = "^[0-9]{8}-[0-9]{1}$";
+            if (Regex.IsMatch(txtDUI_Usuario.Text, formatoDUI) &&
+                (2021 - Convert.ToInt32(txtFechaNacimiento_Usuario.Text) > 17) && txtFechaNacimiento_Usuario.Text != " "
+                && txtDUI_Usuario.Text != " " && (2021 - Convert.ToInt32(txtFechaNacimiento_Usuario.Text) < 101))
             {
                 //SI EL DUI ESTA CORRECTO Y LA FECHA TAMBIEN SE MUESTRAN LOS DEMAS ELEMENTOS
                 txtDUI_Usuario.Enabled = false;
@@ -35,15 +37,22 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 btnvalidar04.Visible = true;
                 l3abel3.Visible = false;
 
+                //cargando combobox de los departamentos
+                var db = new CabinasDeVacunacionCovidDBContext();
+                cmbDepartamento.DataSource = db.Departaments.ToList();
+                cmbDepartamento.DisplayMember = "Departament1";
+                cmbDepartamento.ValueMember = "Id";
+
             }
             else
             {
-                MessageBox.Show("Verifique que el DUI y fecha de nacimiento sean correctos", "Proceso de Cita", MessageBoxButtons.OK,
+                MessageBox.Show("Verifique que el DUI y fecha de nacimiento sean correctos", "Proceso de Cita",
+                    MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
-            }
+        }
 
-            //BOTON PARA SELECCIONAR DEPARTAMENTO
+        //BOTON PARA SELECCIONAR DEPARTAMENTO
         private void btnvalidar04_Click(object sender, EventArgs e)
         {
             //SI EL COMBOBOX ESTA EN NULL TIRRAR MENSAJE (Josue eliminar esta validacion de null despues y dejas la otra)
@@ -63,23 +72,52 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 lblCorreo.Visible = true;
                 txtCorreo_Usuario.Visible = true;
                 label1.Visible = true;
-                cmbEnfermedades.Visible=true;
+                cmbEnfermedades.Visible = true;
                 btnVerificar02.Visible = true;
                 btnvalidar04.Visible = false;
                 cmbDepartamento.Enabled = false;
+
+                var db = new CabinasDeVacunacionCovidDBContext();
+
+                //cargando combobox de emfermedades
+                cmbEnfermedades.DataSource = db.Chronicdiseases.ToList();
+                cmbEnfermedades.DisplayMember = "Disease";
+                cmbEnfermedades.ValueMember = "Id";
+
+                //creando lista de los municipios del departamento seleccionado
+                Departament dref = (Departament) cmbDepartamento.SelectedItem;
+                var ListMunicipality = db.Municipalities
+                    .OrderBy(m => m.IdDepartament)
+                    .Where(m => m.IdDepartament.Equals(dref.Id))
+                    .ToList();
+
+                //cargando combobox de municipios segun departamento seleccionado
+                cmbMunicipios.DataSource = ListMunicipality;
+                cmbMunicipios.DisplayMember = "Municipality1";
+                cmbMunicipios.ValueMember = "Id";
+
             }
         }
 
         private void btnVerificar02_Click(object sender, EventArgs e)
         {
-            var formatoTelefono = "^[0-9]{8}$";
+            //cargando combobox de las instituciones
+            var db = new CabinasDeVacunacionCovidDBContext();
+            cmbIdentificador_Usuario.DataSource = db.Institutions;
+            cmbIdentificador_Usuario.DisplayMember = "Institution1";
+            cmbIdentificador_Usuario.ValueMember = "Id";
+
+            Chronicdisease chref = (Chronicdisease) cmbEnfermedades.SelectedItem;
+
+            var formatoTelefono = "^[+503][2|6|7][0-9]{7}$";
             //Si los campos de datos del usuario estan vacios y municipio en nulo tirar mensaje de error
-            if (txtNombre_Usuario.Text != "" && Regex.IsMatch(txtTelefono_Usuario.Text,formatoTelefono) && cmbMunicipios.SelectedItem!=null &&
-                txtCorreo_Usuario.Text != "" && cmbEnfermedades.SelectedItem!=null && txtTelefono_Usuario.Text!="")
-                
+            if (txtNombre_Usuario.Text != "" && Regex.IsMatch(txtTelefono_Usuario.Text, formatoTelefono) &&
+                cmbMunicipios.SelectedItem != null &&
+                txtCorreo_Usuario.Text != "" && cmbEnfermedades.SelectedItem != null && txtTelefono_Usuario.Text != "")
+
             {
                 //Si la enfermedad es otra a la que esta en la base de datos se habilita un nuevo campo para agregarla 
-                if (cmbEnfermedades.SelectedItem == "Otra")
+                if (chref.Disease == "Otra")
                 {
                     txtEnfermedades_Usuario.Visible = true;
                     lblEnfermedades.Visible = true;
@@ -107,29 +145,33 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     cmbMunicipios.Enabled = false;
                     cmbEnfermedades.Enabled = false;
                 }
-               
+
             }
             else
             {
-                MessageBox.Show("Verifique que los datos esten correctos o no esten vacios", "Proceso de Cita", MessageBoxButtons.OK,
+                MessageBox.Show("Verifique que los datos esten correctos o no esten vacios", "Proceso de Cita",
+                    MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
             }
-            
-          
-          
+
+
+
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            var db = new CabinasDeVacunacionCovidDBContext();
+            Institution insref = (Institution) cmbIdentificador_Usuario.SelectedItem;
             cmbIdentificador_Usuario.Enabled = false;
-            if (cmbIdentificador_Usuario.SelectedItem == "Ninguno")
+
+            if (insref.Institution1 == "Ninguna")
             {
-                
+
                 btnAgendarCita.Enabled = true;
             }
 
-            else if (cmbIdentificador_Usuario.SelectedItem==null)
+            else if (cmbIdentificador_Usuario.SelectedItem == null)
             {
                 MessageBox.Show("Debe seleccionar una institucion escencial", "Proceso de Cita", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -137,11 +179,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
             }
             else
             {
-               
+
                 btnAgendarCita.Enabled = true;
                 btnSeleccionar.Visible = false;
             }
-        
+
         }
 
         private void btnVerificar03_Click(object sender, EventArgs e)
@@ -177,6 +219,19 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private void txtEnfermedades_Usuario_TextChanged(object? sender, EventArgs e)
         {
             throw new NotImplementedException();
+
+            void btnAgendarCita_Click(object sender, EventArgs e)
+            {
+                var db = new CabinasDeVacunacionCovidDBContext();
+
+                string dui = txtDUI_Usuario.Text;
+                string mail = txtCorreo_Usuario.Text;
+                string telephone = txtTelefono_Usuario.Text;
+                string name_user = txtNombre_Usuario.Text;
+                string disease = txtEnfermedades_Usuario.Text;
+                //string direction = 
+
+            }
         }
     }
 }

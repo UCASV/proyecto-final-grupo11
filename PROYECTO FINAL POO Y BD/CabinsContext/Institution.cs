@@ -3,17 +3,17 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
+namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
 {
-    public partial class Chronicdisease
+    public partial class Institution
     {
-        public Chronicdisease()
+        public Institution()
         {
             Patients = new HashSet<Patient>();
         }
 
         public int Id { get; set; }
-        public string Disease { get; set; }
+        public string Institution1 { get; set; }
 
         public virtual ICollection<Patient> Patients { get; set; }
     }

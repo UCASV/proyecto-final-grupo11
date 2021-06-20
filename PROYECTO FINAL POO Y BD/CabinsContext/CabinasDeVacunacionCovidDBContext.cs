@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
+namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
 {
     public partial class CabinasDeVacunacionCovidDBContext : DbContext
     {
@@ -87,10 +87,10 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
             {
                 entity.ToTable("CABIN");
 
-                entity.HasIndex(e => e.Telephone, "UQ__CABIN__61AE339BE044A48F")
+                entity.HasIndex(e => e.Telephone, "UQ__CABIN__61AE339B6C1C040A")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Mail, "UQ__CABIN__7A21290469D1FEB0")
+                entity.HasIndex(e => e.Mail, "UQ__CABIN__7A212904CC1C060B")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -152,10 +152,10 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
             {
                 entity.ToTable("EMPLOYEE");
 
-                entity.HasIndex(e => e.Mail, "UQ__EMPLOYEE__7A212904F10CC957")
+                entity.HasIndex(e => e.Mail, "UQ__EMPLOYEE__7A2129045080964D")
                     .IsUnique();
 
-                entity.HasIndex(e => e.UserEmployee, "UQ__EMPLOYEE__AF9F536B5E431FAD")
+                entity.HasIndex(e => e.UserEmployee, "UQ__EMPLOYEE__AF9F536BB31B0640")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -242,11 +242,11 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
             modelBuilder.Entity<Patient>(entity =>
             {
                 entity.HasKey(e => e.Dui)
-                    .HasName("PK__PATIENT__D876F1BEB1ADCFC1");
+                    .HasName("PK__PATIENT__D876F1BE01207FE4");
 
                 entity.ToTable("PATIENT");
 
-                entity.HasIndex(e => e.Telephone, "UQ__PATIENT__61AE339B91583D0E")
+                entity.HasIndex(e => e.Telephone, "UQ__PATIENT__61AE339B42B9E658")
                     .IsUnique();
 
                 entity.Property(e => e.Dui)
@@ -271,6 +271,12 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
                     .HasMaxLength(30)
                     .IsUnicode(false)
                     .HasColumnName("mail");
+
+                entity.Property(e => e.NamePatient)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("name_patient");
 
                 entity.Property(e => e.Telephone)
                     .IsRequired()
