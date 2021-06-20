@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
+namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
 {
     public partial class Cabin
     {

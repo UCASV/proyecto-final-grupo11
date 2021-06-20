@@ -2,7 +2,8 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using PROYECTO_FINAL_POO_Y_BD.CabinsContext;
+using PROYECTO_FINAL_POO_Y_BD.CabinContext;
+using PROYECTO_FINAL_POO_Y_BD.CabinContext;
 
 namespace PROYECTO_FINAL_POO_Y_BD
 {
@@ -171,7 +172,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
             if (insref.Institution1 == "Ninguna")
             {
-
                 btnAgendarCita.Enabled = true;
             }
 
@@ -199,6 +199,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             }
             else
             {
+                
                 txtEnfermedades_Usuario.Enabled = false;
                 lblIdentificador.Visible = true;
                 cmbIdentificador_Usuario.Visible = true;
@@ -209,6 +210,15 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 txtCorreo_Usuario.Enabled = false;
                 cmbEnfermedades.Enabled = false;
                 btnVerificar03.Visible = false;
+                
+                var db = new CabinasDeVacunacionCovidDBContext();
+                string disease = txtEnfermedades_Usuario.Text;
+                //revisar execiones 
+                Chronicdisease diseases = new Chronicdisease(disease);
+
+                db.Add(diseases);
+                db.SaveChanges();
+                MessageBox.Show("Enfermedad guardada con exito", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
@@ -219,23 +229,37 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.Close();
         }
 
-
-        private void txtEnfermedades_Usuario_TextChanged(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-
-            void btnAgendarCita_Click(object sender, EventArgs e)
+        
+        
+            private void btnAgendarCita_Click(object sender, EventArgs e)
             {
                 var db = new CabinasDeVacunacionCovidDBContext();
 
                 string dui = txtDUI_Usuario.Text;
                 string mail = txtCorreo_Usuario.Text;
                 string telephone = txtTelefono_Usuario.Text;
-                string name_user = txtNombre_Usuario.Text;
+                string nameUser = txtNombre_Usuario.Text;
                 string disease = txtEnfermedades_Usuario.Text;
-                //string direction = 
+                string address = txtDireccionCasa.Text;
+
+                Institution intref = (Institution) cmbIdentificador_Usuario.SelectedItem;
+                Municipality muniref = (Municipality) cmbMunicipios.SelectedItem;
+
+                var diseases = db.Chronicdiseases
+                    .Where(u => u.Disease == disease)
+                    .ToList();
+
+                if (txtEnfermedades_Usuario.Text == "")
+                {
+                    Chronicdisease disref = (Chronicdisease)cmbEnfermedades.SelectedItem;
+                }
+               //faalta terminar aun la logica para el almacenado 
+               //hay ver el porque de las execciones y ver la amnera corecta de gusradar los datos ya que eso esta causando problemas 
+               //por la colleciones o lista que se crean en el context 
+                
+                Patient = new Patient(nameUser, dui, telephone, mail, address, )
 
             }
-        }
+        
     }
 }

@@ -192,7 +192,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.txtEnfermedades_Usuario.Size = new System.Drawing.Size(163, 20);
             this.txtEnfermedades_Usuario.TabIndex = 16;
             this.txtEnfermedades_Usuario.Visible = false;
-            this.txtEnfermedades_Usuario.TextChanged += new System.EventHandler(this.txtEnfermedades_Usuario_TextChanged);
+            
             // 
             // lblEnfermedades
             // 

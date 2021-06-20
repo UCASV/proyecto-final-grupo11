@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
+namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
 {
     public partial class Patient
     {
@@ -25,5 +25,21 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
         public virtual Institution IdInstitutionNavigation { get; set; }
         public virtual Municipality IdMunicipalityNavigation { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; }
+
+        public Patient(string namePatient, string dui, string telephone, string mail, string addressPatient, int idInstitution, int idChronicdiseases, int idMunicipality, Chronicdisease idChronicdiseasesNavigation, Institution idInstitutionNavigation, Municipality idMunicipalityNavigation)
+        {
+            NamePatient = namePatient;
+            Dui = dui;
+            Telephone = telephone;
+            Mail = mail;
+            AddressPatient = addressPatient;
+            IdInstitution = idInstitution;
+            IdChronicdiseases = idChronicdiseases;
+            IdMunicipality = idMunicipality;
+            IdChronicdiseasesNavigation = idChronicdiseasesNavigation;
+            IdInstitutionNavigation = idInstitutionNavigation;
+            IdMunicipalityNavigation = idMunicipalityNavigation;
+            
+        }
     }
 }

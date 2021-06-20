@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
+namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
 {
     public partial class CabinasDeVacunacionCovidDBContext : DbContext
     {
@@ -31,7 +31,7 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=YERVING;Database=CabinasDeVacunacionCovidDB;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-1NERIJQ;Database=CabinasDeVacunacionCovidDB;Trusted_Connection=True;");
             }
         }
 
@@ -62,8 +62,12 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
                     .IsUnicode(false)
                     .HasColumnName("hour_appointment");
 
+                entity.Property(e => e.HourArrival)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("hour_arrival");
+
                 entity.Property(e => e.HourVaccine)
-                    .IsRequired()
                     .HasMaxLength(10)
                     .IsUnicode(false)
                     .HasColumnName("hour_vaccine");
@@ -87,10 +91,10 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
             {
                 entity.ToTable("CABIN");
 
-                entity.HasIndex(e => e.Telephone, "UQ__CABIN__61AE339B6C1C040A")
+                entity.HasIndex(e => e.Telephone, "UQ__CABIN__61AE339B36616162")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Mail, "UQ__CABIN__7A212904CC1C060B")
+                entity.HasIndex(e => e.Mail, "UQ__CABIN__7A2129043D8E6DC7")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -152,10 +156,10 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
             {
                 entity.ToTable("EMPLOYEE");
 
-                entity.HasIndex(e => e.Mail, "UQ__EMPLOYEE__7A2129045080964D")
+                entity.HasIndex(e => e.Mail, "UQ__EMPLOYEE__7A2129042522C7AB")
                     .IsUnique();
 
-                entity.HasIndex(e => e.UserEmployee, "UQ__EMPLOYEE__AF9F536BB31B0640")
+                entity.HasIndex(e => e.UserEmployee, "UQ__EMPLOYEE__AF9F536B784FE224")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -242,11 +246,11 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinsContext
             modelBuilder.Entity<Patient>(entity =>
             {
                 entity.HasKey(e => e.Dui)
-                    .HasName("PK__PATIENT__D876F1BE01207FE4");
+                    .HasName("PK__PATIENT__D876F1BE5B93258B");
 
                 entity.ToTable("PATIENT");
 
-                entity.HasIndex(e => e.Telephone, "UQ__PATIENT__61AE339B42B9E658")
+                entity.HasIndex(e => e.Telephone, "UQ__PATIENT__61AE339BFD20F2B1")
                     .IsUnique();
 
                 entity.Property(e => e.Dui)
