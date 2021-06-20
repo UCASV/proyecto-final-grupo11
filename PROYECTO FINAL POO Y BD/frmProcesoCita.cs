@@ -76,6 +76,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 btnVerificar02.Visible = true;
                 btnvalidar04.Visible = false;
                 cmbDepartamento.Enabled = false;
+                txtDireccionCasa.Visible = true;
+                lblDireccionCasa.Visible = true;
 
                 var db = new CabinasDeVacunacionCovidDBContext();
 
@@ -109,11 +111,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
             Chronicdisease chref = (Chronicdisease) cmbEnfermedades.SelectedItem;
 
-            var formatoTelefono = "^[+503][2|6|7][0-9]{7}$";
+            var formatoTelefono = "^[0-9]{8}$";
             //Si los campos de datos del usuario estan vacios y municipio en nulo tirar mensaje de error
             if (txtNombre_Usuario.Text != "" && Regex.IsMatch(txtTelefono_Usuario.Text, formatoTelefono) &&
                 cmbMunicipios.SelectedItem != null &&
-                txtCorreo_Usuario.Text != "" && cmbEnfermedades.SelectedItem != null && txtTelefono_Usuario.Text != "")
+                txtCorreo_Usuario.Text != "" && cmbEnfermedades.SelectedItem != null && txtTelefono_Usuario.Text != "" && txtDireccionCasa.Text!="")
 
             {
                 //Si la enfermedad es otra a la que esta en la base de datos se habilita un nuevo campo para agregarla 
@@ -129,6 +131,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     cmbEnfermedades.Enabled = false;
                     btnVerificar02.Visible = false;
                     cmbMunicipios.Enabled = false;
+                    txtDireccionCasa.Enabled = false;
                 }
                 else
                 {
@@ -144,6 +147,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     txtCorreo_Usuario.Enabled = false;
                     cmbMunicipios.Enabled = false;
                     cmbEnfermedades.Enabled = false;
+                    txtDireccionCasa.Enabled = false;
                 }
 
             }
