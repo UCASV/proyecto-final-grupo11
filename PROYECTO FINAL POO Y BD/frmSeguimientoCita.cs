@@ -6,6 +6,13 @@ namespace PROYECTO_FINAL_POO_Y_BD
 {
     public partial class frmSeguimientoCita : Form
     {
+        private Button btnDescargar;
+        private DataGridView dtgShow;
+        private Label lblSelectCita;
+        private Button btnSelect;
+        private ComboBox cbCitas;
+        private Button btnVerificar;
+
         public frmSeguimientoCita()
         {
             InitializeComponent();

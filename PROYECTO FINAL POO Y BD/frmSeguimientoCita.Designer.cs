@@ -35,18 +35,18 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnDescargar = new System.Windows.Forms.Button();
+            this.dtgShow = new System.Windows.Forms.DataGridView();
+            this.lblSelectCita = new System.Windows.Forms.Label();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.cbCitas = new System.Windows.Forms.ComboBox();
+            this.btnVerificar = new System.Windows.Forms.Button();
+            this.txtDUI = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dtgShow)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -63,13 +63,13 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel1.Controls.Add(this.btnEditar);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.btnDescargar);
+            this.panel1.Controls.Add(this.dtgShow);
+            this.panel1.Controls.Add(this.lblSelectCita);
+            this.panel1.Controls.Add(this.btnSelect);
+            this.panel1.Controls.Add(this.cbCitas);
+            this.panel1.Controls.Add(this.btnVerificar);
+            this.panel1.Controls.Add(this.txtDUI);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(54, 12);
@@ -93,87 +93,87 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
-            // button2
+            // btnDescargar
             // 
-            this.button2.BackColor = System.Drawing.Color.HotPink;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(15, 548);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(241, 41);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Descargar PDF";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDescargar.BackColor = System.Drawing.Color.HotPink;
+            this.btnDescargar.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.btnDescargar.FlatAppearance.BorderSize = 2;
+            this.btnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDescargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnDescargar.ForeColor = System.Drawing.Color.White;
+            this.btnDescargar.Location = new System.Drawing.Point(15, 548);
+            this.btnDescargar.Name = "btnDescargar";
+            this.btnDescargar.Size = new System.Drawing.Size(241, 41);
+            this.btnDescargar.TabIndex = 8;
+            this.btnDescargar.Text = "Descargar PDF";
+            this.btnDescargar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dtgShow
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 197);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(584, 345);
-            this.dataGridView1.TabIndex = 7;
+            this.dtgShow.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtgShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgShow.Location = new System.Drawing.Point(3, 197);
+            this.dtgShow.Name = "dtgShow";
+            this.dtgShow.Size = new System.Drawing.Size(584, 345);
+            this.dtgShow.TabIndex = 7;
             // 
-            // label3
+            // lblSelectCita
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(163, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Seleccionar cita:";
+            this.lblSelectCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblSelectCita.ForeColor = System.Drawing.Color.White;
+            this.lblSelectCita.Location = new System.Drawing.Point(163, 147);
+            this.lblSelectCita.Name = "lblSelectCita";
+            this.lblSelectCita.Size = new System.Drawing.Size(105, 20);
+            this.lblSelectCita.TabIndex = 6;
+            this.lblSelectCita.Text = "Seleccionar cita:";
             // 
-            // button3
+            // btnSelect
             // 
-            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (192)))), ((int) (((byte) (192)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(349, 167);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 24);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Seleccionar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSelect.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (192)))), ((int) (((byte) (192)))));
+            this.btnSelect.FlatAppearance.BorderSize = 2;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.ForeColor = System.Drawing.Color.White;
+            this.btnSelect.Location = new System.Drawing.Point(349, 167);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(82, 24);
+            this.btnSelect.TabIndex = 5;
+            this.btnSelect.Text = "Seleccionar";
+            this.btnSelect.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // cbCitas
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {"Cita1", "Cita2"});
-            this.comboBox1.Location = new System.Drawing.Point(163, 170);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbCitas.FormattingEnabled = true;
+            this.cbCitas.Items.AddRange(new object[] {"Cita1", "Cita2"});
+            this.cbCitas.Location = new System.Drawing.Point(163, 170);
+            this.cbCitas.Name = "cbCitas";
+            this.cbCitas.Size = new System.Drawing.Size(180, 21);
+            this.cbCitas.TabIndex = 4;
             // 
-            // button1
+            // btnVerificar
             // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(265, 108);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Verificar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnVerificar_Click);
+            this.btnVerificar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnVerificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerificar.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnVerificar.FlatAppearance.BorderSize = 3;
+            this.btnVerificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnVerificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerificar.ForeColor = System.Drawing.Color.White;
+            this.btnVerificar.Location = new System.Drawing.Point(265, 108);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(95, 29);
+            this.btnVerificar.TabIndex = 3;
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.UseVisualStyleBackColor = false;
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
             // 
-            // textBox1
+            // txtDUI
             // 
-            this.textBox1.Location = new System.Drawing.Point(237, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtDUI.Location = new System.Drawing.Point(237, 82);
+            this.txtDUI.Name = "txtDUI";
+            this.txtDUI.Size = new System.Drawing.Size(155, 20);
+            this.txtDUI.TabIndex = 2;
             // 
             // label2
             // 
@@ -211,9 +211,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dtgShow)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.TextBox txtDUI;
 
         private System.Windows.Forms.Button btnEditar;
 
