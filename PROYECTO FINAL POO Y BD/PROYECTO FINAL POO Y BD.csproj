@@ -17,6 +17,9 @@
       <Compile Update="frmSeguimientoCita.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="frmAddVaccine.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

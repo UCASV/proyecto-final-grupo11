@@ -172,5 +172,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
         {
             this.Close();
         }
+
+
+        private void txtEnfermedades_Usuario_TextChanged(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

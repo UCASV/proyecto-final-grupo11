@@ -97,8 +97,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.413462F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.29808F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -114,7 +114,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // txtFechaNacimiento_Usuario
             // 
             this.txtFechaNacimiento_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFechaNacimiento_Usuario.Location = new System.Drawing.Point(215, 43);
+            this.txtFechaNacimiento_Usuario.Location = new System.Drawing.Point(215, 37);
             this.txtFechaNacimiento_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtFechaNacimiento_Usuario.Name = "txtFechaNacimiento_Usuario";
             this.txtFechaNacimiento_Usuario.Size = new System.Drawing.Size(163, 20);
@@ -132,10 +132,10 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(49, 41);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(49, 35);
             this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(162, 41);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(162, 47);
             this.lblFechaNacimiento.TabIndex = 21;
             this.lblFechaNacimiento.Text = "Año de nacimiento:";
             this.lblFechaNacimiento.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -146,7 +146,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.lblDUI.Location = new System.Drawing.Point(49, 0);
             this.lblDUI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDUI.Name = "lblDUI";
-            this.lblDUI.Size = new System.Drawing.Size(162, 41);
+            this.lblDUI.Size = new System.Drawing.Size(162, 35);
             this.lblDUI.TabIndex = 1;
             this.lblDUI.Text = "DUI:";
             this.lblDUI.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -187,6 +187,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.txtEnfermedades_Usuario.Size = new System.Drawing.Size(163, 20);
             this.txtEnfermedades_Usuario.TabIndex = 16;
             this.txtEnfermedades_Usuario.Visible = false;
+            this.txtEnfermedades_Usuario.TextChanged += new System.EventHandler(this.txtEnfermedades_Usuario_TextChanged);
             // 
             // lblEnfermedades
             // 
@@ -382,7 +383,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnAgendarCita.Name = "btnAgendarCita";
             this.btnAgendarCita.Size = new System.Drawing.Size(184, 44);
             this.btnAgendarCita.TabIndex = 10;
-            this.btnAgendarCita.Text = "Agendar";
+            this.btnAgendarCita.Text = "Guardar y generar cita";
             this.btnAgendarCita.UseVisualStyleBackColor = false;
             // 
             // btnVerificarDUI
