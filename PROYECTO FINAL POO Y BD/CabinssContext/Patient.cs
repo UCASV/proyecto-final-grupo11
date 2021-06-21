@@ -36,6 +36,7 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
             IdChronicdiseasesNavigation = idChronicdiseasesNavigation;
             IdInstitutionNavigation = idInstitutionNavigation;
             IdMunicipalityNavigation = idMunicipalityNavigation;
+            
         }
     }
 }

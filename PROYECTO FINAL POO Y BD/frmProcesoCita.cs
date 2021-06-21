@@ -244,12 +244,17 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 Institution intref = (Institution) cmbIdentificador_Usuario.SelectedItem;
                 Municipality muniref = (Municipality) cmbMunicipios.SelectedItem;
                 Chronicdisease chref = (Chronicdisease) cmbEnfermedades.SelectedItem;
-                
+
+                Institution idb = db.Set<Institution>().SingleOrDefault(i => i.Id == intref.Id);
+                Municipality mdb = db.Set<Municipality>().SingleOrDefault(m => m.Id == muniref.Id);
+                Chronicdisease cdb = db.Set<Chronicdisease>().SingleOrDefault(c => c.Id == chref.Id);
                 //error no guarda correctamente
-                Patient patient = new Patient(dui,telephone , nameUser, mail, address, chref, intref, muniref);
+                var patient = new Patient(dui,telephone , nameUser, mail, address, chref, intref, muniref);
 
                 db.Add(patient);
                 db.SaveChanges();
+                
+                
                 
                 MessageBox.Show("Datos de paciente guardados con exito", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
