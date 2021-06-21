@@ -10,9 +10,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
 {
     public partial class frmProcesoCita : Form
     {
-        public frmProcesoCita()
+        public int idEmployee { get; set; }
+        public frmProcesoCita(int id)
         {
             InitializeComponent();
+            this.idEmployee = id;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -210,7 +212,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 
                 var db = new CabinasDeVacunacionCovidDBContext();
                 string disease = txtEnfermedades_Usuario.Text;
-                //revisar execiones 
+               
                 Chronicdisease diseases = new Chronicdisease(disease);
 
                 db.Add(diseases);
@@ -252,11 +254,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 Chronicdisease chref = (Chronicdisease) cmbEnfermedades.SelectedItem;
                 Chronicdisease cdb = db.Set<Chronicdisease>().SingleOrDefault(c => c.Id == chref.Id);
 
-                //error no guarda correctamente
+                //guardando datos del paciente
                 var patient = new Patient(dui,telephone , nameUser, mail, address, cdb, idb, mdb);
-                
                 db.Add(patient);
                 db.SaveChanges();
+                
                 //Generando primer cita
                 var random = new Random();
                 var CitaUnoFecha = "2021-";
@@ -333,11 +335,16 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     horaCita = hora + ":00";
                 }
                 var dateOne = DateTime.Parse(CitaUnoFecha);
-                Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui == dui);
-                Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id == 10); //Pasar el id del gestor desde el login para poder usarlo
 
-                //var cita = new Appointment(dateOne,horaCita,null,null,patref,cabinref);
-                MessageBox.Show("Datos de paciente guardados con exito", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var cabin = db.Cabins
+                    .Where(u => u.IdEmployee == idEmployee)
+                    .ToList();
+                
+                Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui == txtDUI_Usuario.Text);
+                Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id == cabin[0].Id); //Pasar el id del gestor desde el login para poder usarlo
+                
+                var cita = new Appointment(dateOne,horaCita,null,null,patref,cabinref);
+                MessageBox.Show("Datos de paciente guardados con exito" + $"{cabin[0].Id}", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
     }
 }
