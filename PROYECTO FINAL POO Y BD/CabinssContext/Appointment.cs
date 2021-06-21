@@ -17,5 +17,7 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
 
         public virtual Patient DuiPatientNavigation { get; set; }
         public virtual Cabin IdCabinNavigation { get; set; }
+
+        
     }
 }

@@ -257,9 +257,86 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 
                 db.Add(patient);
                 db.SaveChanges();
+                //Generando primer cita
+                var random = new Random();
+                var CitaUnoFecha = "2021-";
+                int day;
+                //Funcion para generar día
+                int GenerateDay(int min, int max)
+                {
+                    day = random.Next(min, max);
+                    return day;
+                }
+                var month = random.Next(6,12);
+                if (month == 9 || month == 11)
+                {
+                    day = GenerateDay(1, 30);
+                    if (day < 10)
+                    {
+                        if (month < 10)
+                        {
+                            CitaUnoFecha += "0" + month + "-0" + day;    
+                        }
+                        else
+                        {
+                            CitaUnoFecha +=  month + "-0" + day;
+                        }
+                    }
+                    else
+                    {
+                        if (month < 10)
+                        {
+                            CitaUnoFecha += "0" + month + "-" + day;    
+                        }
+                        else
+                        {
+                            CitaUnoFecha +=  month + "-" + day;
+                        }
+                    }
+                }
+                else
+                {
+                    day = GenerateDay(1, 31);
+                    if (day < 10)
+                    {
+                        if (month < 10)
+                        {
+                            CitaUnoFecha += "0" + month + "-0" + day;    
+                        }
+                        else
+                        {
+                            CitaUnoFecha +=  month + "-0" + day;
+                        }
+                    }
+                    else
+                    {
+                        if (month < 10)
+                        {
+                            CitaUnoFecha += "0" + month + "-" + day;    
+                        }
+                        else
+                        {
+                            CitaUnoFecha +=  month + "-" + day;
+                        }
+                    }
+                }
+
                 
-                
-                
+                var hora = random.Next(7, 17);
+                string horaCita;
+                if (hora < 10)
+                {
+                    horaCita = "0" + hora + ":00";
+                }
+                else
+                {
+                    horaCita = hora + ":00";
+                }
+                var dateOne = DateTime.Parse(CitaUnoFecha);
+                Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui == dui);
+                Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id == 10); //Pasar el id del gestor desde el login para poder usarlo
+
+                //var cita = new Appointment(dateOne,horaCita,null,null,patref,cabinref);
                 MessageBox.Show("Datos de paciente guardados con exito", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
     }
