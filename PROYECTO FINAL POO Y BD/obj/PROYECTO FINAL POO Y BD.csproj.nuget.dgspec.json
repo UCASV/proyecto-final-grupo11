@@ -1,33 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jdp49\\OneDrive\\Escritorio\\proyec\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj": {}
+    "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jdp49\\OneDrive\\Escritorio\\proyec\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj": {
+    "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jdp49\\OneDrive\\Escritorio\\proyec\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
         "projectName": "PROYECTO FINAL POO Y BD",
-        "projectPath": "C:\\Users\\jdp49\\OneDrive\\Escritorio\\proyec\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
-        "packagesPath": "C:\\Users\\jdp49\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jdp49\\OneDrive\\Escritorio\\proyec\\PROYECTO FINAL POO Y BD\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto\\PROYECTO FINAL POO Y BD\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jdp49\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\HP\\.nuget\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

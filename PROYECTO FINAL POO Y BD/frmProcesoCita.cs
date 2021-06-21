@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using Microsoft.EntityFrameworkCore;
 using PROYECTO_FINAL_POO_Y_BD.CabinssContext;
 using PROYECTO_FINAL_POO_Y_BD.CabinssContext;
 
@@ -217,7 +218,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 MessageBox.Show("Enfermedad guardada con exito", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //cargando combobox de emfermedades
-                cmbEnfermedades.DataSource = db.Chronicdiseases.ToList();
+                cmbEnfermedades.DataSource = db.Chronicdiseases.AsNoTracking().ToList();
                 cmbEnfermedades.DisplayMember = "Disease";
                 cmbEnfermedades.ValueMember = "Id";
                 btnVerificar02.Visible = true;
@@ -241,16 +242,19 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 string telephone = txtTelefono_Usuario.Text;
                 string nameUser = txtNombre_Usuario.Text;
                 string address = txtDireccionCasa.Text;
+                
                 Institution intref = (Institution) cmbIdentificador_Usuario.SelectedItem;
-                Municipality muniref = (Municipality) cmbMunicipios.SelectedItem;
-                Chronicdisease chref = (Chronicdisease) cmbEnfermedades.SelectedItem;
-
                 Institution idb = db.Set<Institution>().SingleOrDefault(i => i.Id == intref.Id);
+                
+                Municipality muniref = (Municipality) cmbMunicipios.SelectedItem;
                 Municipality mdb = db.Set<Municipality>().SingleOrDefault(m => m.Id == muniref.Id);
+                
+                Chronicdisease chref = (Chronicdisease) cmbEnfermedades.SelectedItem;
                 Chronicdisease cdb = db.Set<Chronicdisease>().SingleOrDefault(c => c.Id == chref.Id);
-                //error no guarda correctamente
-                var patient = new Patient(dui,telephone , nameUser, mail, address, chref, intref, muniref);
 
+                //error no guarda correctamente
+                var patient = new Patient(dui,telephone , nameUser, mail, address, cdb, idb, mdb);
+                
                 db.Add(patient);
                 db.SaveChanges();
                 
