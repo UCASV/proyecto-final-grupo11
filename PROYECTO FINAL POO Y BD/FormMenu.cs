@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
-using PROYECTO_FINAL_POO_Y_BD.CabinssContext;
+using PROYECTO_FINAL_POO_Y_BD.CabinContext;
+
 
 namespace PROYECTO_FINAL_POO_Y_BD
 {
     public partial class FormMenu : Form
     {
-        public int idEmployee { get; set; }
-            public FormMenu(int id)
+        public Employee idEmployee { get; set; }
+            public FormMenu(Employee id)
         {
             InitializeComponent();
             this.idEmployee = id;

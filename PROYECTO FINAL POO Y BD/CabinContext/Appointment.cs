@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
+namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
 {
     public partial class Appointment
     {
@@ -20,7 +20,6 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
 
         public Appointment(DateTime dateAppointment, string hourAppointment, string hourVaccine, string hourArrival, Patient duiPatientNavigation, Cabin idCabinNavigation)
         {
-            
             DateAppointment = dateAppointment;
             HourAppointment = hourAppointment;
             HourVaccine = hourVaccine;
@@ -28,7 +27,5 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
             DuiPatientNavigation = duiPatientNavigation;
             IdCabinNavigation = idCabinNavigation;
         }
-
-        
     }
 }

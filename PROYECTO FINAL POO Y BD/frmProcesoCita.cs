@@ -1,17 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
-using PROYECTO_FINAL_POO_Y_BD.CabinssContext;
-using PROYECTO_FINAL_POO_Y_BD.CabinssContext;
+using PROYECTO_FINAL_POO_Y_BD.CabinContext;
 
 namespace PROYECTO_FINAL_POO_Y_BD
 {
     public partial class frmProcesoCita : Form
     {
-        public int idEmployee { get; set; }
-        public frmProcesoCita(int id)
+        public Employee idEmployee { get; set; }
+        public frmProcesoCita(Employee id)
         {
             InitializeComponent();
             this.idEmployee = id;
@@ -233,9 +233,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
         {
             this.Close();
         }
-
         
-
             private void btnAgendarCita_Click_1(object sender, EventArgs e)
             {
                 var db = new CabinasDeVacunacionCovidDBContext();
@@ -337,13 +335,16 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 var dateOne = DateTime.Parse(CitaUnoFecha);
 
                 var cabin = db.Cabins
-                    .Where(u => u.IdEmployee == idEmployee)
+                    .Where(u => u.IdEmployee == idEmployee.Id)
                     .ToList();
-                
-                Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui == txtDUI_Usuario.Text);
-                Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id == cabin[0].Id); //Pasar el id del gestor desde el login para poder usarlo
-                
-                var cita = new Appointment(dateOne,horaCita,null,null,patref,cabinref);
+                DateTime datexdddd = DateTime.Now;
+
+                Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui == "12345678-9");
+                Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id == idEmployee.Id); //Pasar el id del gestor desde el login para poder usarlo
+
+                var cita = new Appointment(datexdddd,horaCita,"pendiente","pendiente", patref, cabinref);
+                db.Add(cita);
+                db.SaveChanges();
                 MessageBox.Show("Datos de paciente guardados con exito" + $"{cabin[0].Id}", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
     }

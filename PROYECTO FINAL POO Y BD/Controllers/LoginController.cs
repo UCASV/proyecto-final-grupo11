@@ -1,7 +1,7 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
-using PROYECTO_FINAL_POO_Y_BD.CabinssContext;
-
+using PROYECTO_FINAL_POO_Y_BD.CabinContext;
 
 namespace PROYECTO_FINAL_POO_Y_BD
 {
@@ -13,7 +13,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             
             var db = new CabinasDeVacunacionCovidDBContext();
             
-            var employee = db.Employees
+            List<Employee> employee = db.Employees
                 .OrderBy(e => e.Id)
                 .ToList();
             
@@ -30,7 +30,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             else
             {
                 var idEmployee = employeeFound[0].Id;
-                FormMenu window1 = new FormMenu(idEmployee);
+                FormMenu window1 = new FormMenu(employeeFound[0]);
                 form1.Hide();
                 window1.Show();
             }

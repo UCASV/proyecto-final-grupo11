@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
+namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
 {
     public partial class CabinasDeVacunacionCovidDBContext : DbContext
     {
@@ -31,7 +31,7 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-1NERIJQ;Database=CabinasDeVacunacionCovidDB;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=NESTOR-PC;Database=CabinasDeVacunacionCovidDB;Trusted_Connection=True;");
             }
         }
 
@@ -46,7 +46,7 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.DateAppointment)
-                    .HasColumnType("date")
+                    .HasColumnType("datetime")
                     .HasColumnName("date_appointment");
 
                 entity.Property(e => e.DuiPatient)
@@ -91,10 +91,10 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
             {
                 entity.ToTable("CABIN");
 
-                entity.HasIndex(e => e.Telephone, "UQ__CABIN__61AE339B7DBEA9F7")
+                entity.HasIndex(e => e.Telephone, "UQ__CABIN__61AE339B3CB883D4")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Mail, "UQ__CABIN__7A212904914D15EC")
+                entity.HasIndex(e => e.Mail, "UQ__CABIN__7A2129040B6FF8EC")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -156,10 +156,10 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
             {
                 entity.ToTable("EMPLOYEE");
 
-                entity.HasIndex(e => e.Mail, "UQ__EMPLOYEE__7A2129040500C7BD")
+                entity.HasIndex(e => e.Mail, "UQ__EMPLOYEE__7A2129044609532D")
                     .IsUnique();
 
-                entity.HasIndex(e => e.UserEmployee, "UQ__EMPLOYEE__AF9F536B5E9C88EB")
+                entity.HasIndex(e => e.UserEmployee, "UQ__EMPLOYEE__AF9F536B2FC55DAC")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -246,11 +246,11 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinssContext
             modelBuilder.Entity<Patient>(entity =>
             {
                 entity.HasKey(e => e.Dui)
-                    .HasName("PK__PATIENT__D876F1BE7B763BDD");
+                    .HasName("PK__PATIENT__D876F1BEAD0AFA1E");
 
                 entity.ToTable("PATIENT");
 
-                entity.HasIndex(e => e.Telephone, "UQ__PATIENT__61AE339B7AC9257D")
+                entity.HasIndex(e => e.Telephone, "UQ__PATIENT__61AE339B91C8D389")
                     .IsUnique();
 
                 entity.Property(e => e.Dui)
