@@ -265,7 +265,6 @@ C:\Users\jdp49\OneDrive\Escritorio\proyec\PROYECTO FINAL POO Y BD\obj\Debug\net5
 C:\Users\jdp49\OneDrive\Escritorio\proyec\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\ref\PROYECTO FINAL POO Y BD.dll
 C:\Users\jdp49\OneDrive\Escritorio\proyec\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.pdb
 C:\Users\jdp49\OneDrive\Escritorio\proyec\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.genruntimeconfig.cache
-<<<<<<< HEAD
 C:\Users\HP\Desktop\UCA - Material\2021\2021-CICLO-01\03-PROGRAMACIÓN ORIENTADA A OBJETOS\Proyecto\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.csprojAssemblyReference.cache
 C:\Users\HP\Desktop\UCA - Material\2021\2021-CICLO-01\03-PROGRAMACIÓN ORIENTADA A OBJETOS\Proyecto\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.Form1.resources
 C:\Users\HP\Desktop\UCA - Material\2021\2021-CICLO-01\03-PROGRAMACIÓN ORIENTADA A OBJETOS\Proyecto\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.FormMenu.resources
@@ -328,7 +327,6 @@ C:\Users\HP\Desktop\UCA - Material\2021\2021-CICLO-01\03-PROGRAMACIÓN ORIENTADA
 C:\Users\HP\Desktop\UCA - Material\2021\2021-CICLO-01\03-PROGRAMACIÓN ORIENTADA A OBJETOS\Proyecto\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\ref\PROYECTO FINAL POO Y BD.dll
 C:\Users\HP\Desktop\UCA - Material\2021\2021-CICLO-01\03-PROGRAMACIÓN ORIENTADA A OBJETOS\Proyecto\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.pdb
 C:\Users\HP\Desktop\UCA - Material\2021\2021-CICLO-01\03-PROGRAMACIÓN ORIENTADA A OBJETOS\Proyecto\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.genruntimeconfig.cache
-=======
 C:\Users\xxhac\Desktop\PROYECTO 2021 UCA\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO FINAL POO Y BD.csprojAssemblyReference.cache
 C:\Users\xxhac\Desktop\PROYECTO 2021 UCA\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.Form1.resources
 C:\Users\xxhac\Desktop\PROYECTO 2021 UCA\PROYECTO FINAL POO Y BD\obj\Debug\net5.0-windows\PROYECTO_FINAL_POO_Y_BD.FormMenu.resources

@@ -342,7 +342,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui == dui );
                 Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id == idEmployee.Id); //Pasar el id del gestor desde el login para poder usarlo
 
-                var cita = new Appointment(datexdddd,horaCita,"pendiente","pendiente", patref.Dui, cabinref.Id);
+                Appointment cita = new Appointment(datexdddd,horaCita,"pendiente","pendiente", patref, cabinref);
                 db.Add(cita);
                 db.SaveChanges();
                 MessageBox.Show("Datos de paciente guardados con exito" + $"{cabin[0].Id}", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
