@@ -338,11 +338,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     .Where(u => u.IdEmployee == idEmployee.Id)
                     .ToList();
                 DateTime datexdddd = DateTime.Now;
-
-                Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui == "12345678-9");
+                
+                Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui == dui );
                 Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id == idEmployee.Id); //Pasar el id del gestor desde el login para poder usarlo
 
-                var cita = new Appointment(datexdddd,horaCita,"pendiente","pendiente", patref, cabinref);
+                var cita = new Appointment(datexdddd,horaCita,"pendiente","pendiente", patref.Dui, cabinref.Id);
                 db.Add(cita);
                 db.SaveChanges();
                 MessageBox.Show("Datos de paciente guardados con exito" + $"{cabin[0].Id}", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
