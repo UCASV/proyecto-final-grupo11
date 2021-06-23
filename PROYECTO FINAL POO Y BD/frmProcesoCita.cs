@@ -259,69 +259,20 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 
                 //Generando primer cita
                 var random = new Random();
-                var CitaUnoFecha = "2021-";
+                
                 int day;
-                //Funcion para generar día
-                int GenerateDay(int min, int max)
+                //Funcion para generar día, si no tie
+                DateTime dateForAppointment;
+                if (cmbEnfermedades.Text == "Ninguna" && cmbIdentificador_Usuario.Text == "Ninguna")
                 {
-                    day = random.Next(min, max);
-                    return day;
-                }
-                var month = random.Next(6,12);
-                if (month == 9 || month == 11)
-                {
-                    day = GenerateDay(1, 30);
-                    if (day < 10)
-                    {
-                        if (month < 10)
-                        {
-                            CitaUnoFecha += "0" + month + "-0" + day;    
-                        }
-                        else
-                        {
-                            CitaUnoFecha +=  month + "-0" + day;
-                        }
-                    }
-                    else
-                    {
-                        if (month < 10)
-                        {
-                            CitaUnoFecha += "0" + month + "-" + day;    
-                        }
-                        else
-                        {
-                            CitaUnoFecha +=  month + "-" + day;
-                        }
-                    }
+                    dateForAppointment = DateTime.Now.AddDays(random.Next(2, 60));
                 }
                 else
                 {
-                    day = GenerateDay(1, 31);
-                    if (day < 10)
-                    {
-                        if (month < 10)
-                        {
-                            CitaUnoFecha += "0" + month + "-0" + day;    
-                        }
-                        else
-                        {
-                            CitaUnoFecha +=  month + "-0" + day;
-                        }
-                    }
-                    else
-                    {
-                        if (month < 10)
-                        {
-                            CitaUnoFecha += "0" + month + "-" + day;    
-                        }
-                        else
-                        {
-                            CitaUnoFecha +=  month + "-" + day;
-                        }
-                    }
+                    dateForAppointment = DateTime.Now.AddDays(random.Next(2, 7));
                 }
 
-                
+                //Generando hora de cita
                 var hora = random.Next(7, 17);
                 string horaCita;
                 if (hora < 10)
@@ -332,20 +283,21 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 {
                     horaCita = hora + ":00";
                 }
-                var dateOne = DateTime.Parse(CitaUnoFecha);
 
                 var cabin = db.Cabins
                     .Where(u => u.IdEmployee == idEmployee.Id)
                     .ToList();
-                DateTime datexdddd = DateTime.Now;
                 
-                Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui == dui );
-                Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id == idEmployee.Id); //Pasar el id del gestor desde el login para poder usarlo
+                
+                Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui.Equals(dui));
+                Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id.Equals(idEmployee.Id)); //Pasar el id del gestor desde el login para poder usarlo
 
-                var cita = new Appointment(datexdddd,horaCita,"pendiente","pendiente", patref.Dui, cabinref.Id);
+                var cita = new Appointment(dateForAppointment,horaCita,"pendiente","pendiente", patref, cabinref);
+                
                 db.Add(cita);
                 db.SaveChanges();
-                MessageBox.Show("Datos de paciente guardados con exito" + $"{cabin[0].Id}", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Datos del paciente {patref.NamePatient} y primer cita, guardados con éxito, Revisar 'Citas'", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
     }
 }

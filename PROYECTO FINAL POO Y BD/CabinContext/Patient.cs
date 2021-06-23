@@ -36,6 +36,7 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
             IdInstitutionNavigation = idInstitutionNavigation;
             IdMunicipalityNavigation = idMunicipalityNavigation;
         }
+
         
     }
 }

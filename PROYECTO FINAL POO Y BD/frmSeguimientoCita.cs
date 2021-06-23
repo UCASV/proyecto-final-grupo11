@@ -24,42 +24,41 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private void btnVerificar_Click(object sender, EventArgs e)
         {
             var db = new CabinasDeVacunacionCovidDBContext();
-            var formatoDUI="^[0-9]{8}-[0-9]{1}$";
-            
-<<<<<<< HEAD
-            if (textBox1.Text != " " && Regex.IsMatch(textBox1.Text,formatoDUI))
+            var formatoDUI = "^[0-9]{8}-[0-9]{1}$";
+
+            if (textBox1.Text != " " && Regex.IsMatch(textBox1.Text, formatoDUI))
             {
-                
+
                 var verification = db.Appointments
                     .Where(i => i.DuiPatient.Equals(txtDUI))
                     .ToList();
-                
+
                 //EL FORMATO ESTA CORRECTO PERO FALTA UNA VALIDACION MAS
                 MessageBox.Show("SIII", "Seguimiento de Cita", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-                
-                 if(verification.Count > 0)
-                 {
-                   cargarCita2();
-                 }
-                 else
-                 {
+
+                if (verification.Count > 0)
+                {
+                    cargarCita2();
+                }
+                else
+                {
                     MessageBox.Show("Paciente no registrado", "Seguimiento de Cita", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
-                 }
-=======
-            if (Regex.IsMatch(txtDUI.Text,formatoDUI))
-            {
-             
-                btnSelect.Enabled = true;
-                cbCitas.Enabled = true;
->>>>>>> prueba
+                }
+
+                if (Regex.IsMatch(txtDUI.Text, formatoDUI))
+                {
+
+                    btnSelect.Enabled = true;
+                    cbCitas.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Formato de DUI incorrecto", "Seguimiento de Cita", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show("Formato de DUI incorrecto", "Seguimiento de Cita", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            } 
         }
 
 

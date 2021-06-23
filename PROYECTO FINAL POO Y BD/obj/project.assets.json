@@ -7323,19 +7323,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xxhac\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xxhac\\Desktop\\PROYECTO 2021 UCA\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
       "projectName": "PROYECTO FINAL POO Y BD",
-      "projectPath": "C:\\Users\\xxhac\\Desktop\\PROYECTO 2021 UCA\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
-      "packagesPath": "C:\\Users\\xxhac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xxhac\\Desktop\\PROYECTO 2021 UCA\\PROYECTO FINAL POO Y BD\\obj\\",
+      "projectPath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto\\PROYECTO FINAL POO Y BD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xxhac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7343,6 +7343,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\HP\\.nuget\\packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7398,7 +7399,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
