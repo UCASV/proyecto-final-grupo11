@@ -18,7 +18,17 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
         public virtual Patient DuiPatientNavigation { get; set; }
         public virtual Cabin IdCabinNavigation { get; set; }
 
+<<<<<<< HEAD
         public Appointment()
+=======
+
+        public Appointment()
+        {
+            
+        }
+
+    public Appointment(DateTime dateAppointment, string hourAppointment, string hourVaccine, string hourArrival, Patient duiPatientNavigation, Cabin idCabinNavigation)
+>>>>>>> backend
         {
             
         }

@@ -26,20 +26,36 @@ namespace PROYECTO_FINAL_POO_Y_BD
             var db = new CabinasDeVacunacionCovidDBContext();
             var formatoDUI = "^[0-9]{8}-[0-9]{1}$";
 
+<<<<<<< HEAD
             if (textBox1.Text != " " && Regex.IsMatch(textBox1.Text, formatoDUI))
+=======
+
+            if (txtDUI.Text != "" && Regex.IsMatch(txtDUI.Text, formatoDUI))
+>>>>>>> backend
             {
 
                 var verification = db.Appointments
-                    .Where(i => i.DuiPatient.Equals(txtDUI))
+                    .Include(i=> i.DuiPatientNavigation)
+                    .Where(i => i.DuiPatientNavigation.Dui.Equals(txtDUI.Text))
                     .ToList();
+<<<<<<< HEAD
 
                 //EL FORMATO ESTA CORRECTO PERO FALTA UNA VALIDACION MAS
+=======
+                
+>>>>>>> backend
                 MessageBox.Show("SIII", "Seguimiento de Cita", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
                 if (verification.Count > 0)
                 {
+<<<<<<< HEAD
                     cargarCita2();
+=======
+                    cargarCita();
+                    btnDescargar.Enabled = true;
+                    btnEditar.Enabled = true;
+>>>>>>> backend
                 }
                 else
                 {
@@ -47,18 +63,37 @@ namespace PROYECTO_FINAL_POO_Y_BD
                         MessageBoxIcon.Error);
                 }
 
+<<<<<<< HEAD
                 if (Regex.IsMatch(txtDUI.Text, formatoDUI))
+=======
+                /*if (Regex.IsMatch(txtDUI.Text, formatoDUI))
+>>>>>>> backend
                 {
 
                     btnSelect.Enabled = true;
                     cbCitas.Enabled = true;
+<<<<<<< HEAD
+=======
+
+>>>>>>> backend
                 }
                 else
                 {
                     MessageBox.Show("Formato de DUI incorrecto", "Seguimiento de Cita", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
+<<<<<<< HEAD
                 }
             }
+=======
+                }*/
+                
+            }
+            else
+            {
+                MessageBox.Show("Formato invalido", "Seguimiento de Cita", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+>>>>>>> backend
         }
 
 
@@ -70,35 +105,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             var listPatient = db.Appointments
                 .Include(i => i.DuiPatientNavigation)
                 .Include(i=> i.IdCabinNavigation)
-                .Where(i=> i.DuiPatientNavigation.Dui.Equals(txtDUI))
-                .Select(x => new
-                {
-                    Numero_de_cita = x.Id,
-                    Nombre = x.DuiPatientNavigation.NamePatient,
-                    txtDUI = x.DuiPatientNavigation.Dui,
-                    Telefono = x.DuiPatientNavigation.Telephone,
-                    Direccion = x.DuiPatientNavigation.AddressPatient,
-                    Email = x.DuiPatientNavigation.Mail,
-                    Fecha_cita = x.DateAppointment,
-                    Hora_cita = x.HourAppointment,
-                    Hora_llegada = x.HourArrival,
-                    Hora_vacuna = x.HourVaccine,
-                })
-                .ToList();
-            
-            
-            dtgShow.DataSource = null;
-            dtgShow.DataSource = listPatient;
-        }
-        private void cargarCita2()
-        { 
-            var db = new CabinasDeVacunacionCovidDBContext();
-            
-            
-            var listPatient = db.Appointments
-                .Include(i => i.DuiPatientNavigation)
-                .Include(i=> i.IdCabinNavigation)
-                .Where(i=> i.DuiPatient.Equals(txtDUI))
+                .Where(i=> i.DuiPatientNavigation.Dui.Equals(txtDUI.Text))
                 .Select(x => new
                 {
                     Numero_de_cita = x.Id,
@@ -117,6 +124,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             dtgShow.DataSource = null;
             dtgShow.DataSource = listPatient;
         }
+        
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
@@ -124,7 +132,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
               win2.ShowDialog();                      
         }
 
-        private void btnSelect_Click(object sender, EventArgs e)
+        /*private void btnSelect_Click(object sender, EventArgs e)
         {
          if(cbCitas.SelectedItem == null){
              MessageBox.Show("Debe seleccionar una Cita", "Seguimiento de Cita", MessageBoxButtons.OK,
@@ -149,7 +157,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                   btnEditar.Enabled = true;
          }
        
-        }
+        }*/
 
 
         private void btnCancelar_Click(object sender, EventArgs e)
