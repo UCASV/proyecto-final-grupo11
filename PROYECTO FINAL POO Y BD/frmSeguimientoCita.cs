@@ -9,12 +9,12 @@ namespace PROYECTO_FINAL_POO_Y_BD
 {
     public partial class frmSeguimientoCita : Form
     {
-        private Button btnDescargar;
-        private DataGridView dtgShow;
+        private System.Windows.Forms.Button btnDescargar;
+        private System.Windows.Forms.DataGridView dtgShow;
         private Label lblSelectCita;
-        private Button btnSelect;
-        private ComboBox cbCitas;
-        private Button btnVerificar;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.ComboBox cbCitas;
+        private System.Windows.Forms.Button btnVerificar;
 
         public frmSeguimientoCita()
         {
@@ -26,6 +26,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             var db = new CabinasDeVacunacionCovidDBContext();
             var formatoDUI="^[0-9]{8}-[0-9]{1}$";
             
+<<<<<<< HEAD
             if (textBox1.Text != " " && Regex.IsMatch(textBox1.Text,formatoDUI))
             {
                 
@@ -46,6 +47,13 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     MessageBox.Show("Paciente no registrado", "Seguimiento de Cita", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                  }
+=======
+            if (Regex.IsMatch(txtDUI.Text,formatoDUI))
+            {
+             
+                btnSelect.Enabled = true;
+                cbCitas.Enabled = true;
+>>>>>>> prueba
             }
             else
             {
@@ -115,6 +123,39 @@ namespace PROYECTO_FINAL_POO_Y_BD
         {
              frmAddVaccine win2 = new frmAddVaccine();
               win2.ShowDialog();                      
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+         if(cbCitas.SelectedItem == null){
+             MessageBox.Show("Debe seleccionar una Cita", "Seguimiento de Cita", MessageBoxButtons.OK,
+                 MessageBoxIcon.Information);
+         
+         }
+          //Si se selecciona cita 1 que se muestren datos de cita 1 desde la base de datos
+         else if(cbCitas.SelectedItem == "Cita1")
+                 {
+                     MessageBox.Show("Se selecciono Cita 1", "Seguimiento de Cita", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                     btnDescargar.Enabled = true;
+                     btnEditar.Enabled = true;
+                 }
+                   //Si se selecciona cita 2 que se muestren datos de cita 1 desde la base de datos
+         else
+         {
+             MessageBox.Show("Se selecciono Cita 2", "Seguimiento de Cita", MessageBoxButtons.OK,
+                 MessageBoxIcon.Information);
+                 
+                  btnDescargar.Enabled = true;
+                  btnEditar.Enabled = true;
+         }
+       
+        }
+
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
