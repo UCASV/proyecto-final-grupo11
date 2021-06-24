@@ -75,7 +75,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.panel1.Controls.Add(this.txtDUI);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(72, 15);
+            this.panel1.Location = new System.Drawing.Point(81, 13);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(783, 741);
@@ -132,6 +132,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnDescargar.TabIndex = 8;
             this.btnDescargar.Text = "Descargar PDF";
             this.btnDescargar.UseVisualStyleBackColor = false;
+            this.btnDescargar.Click += new System.EventHandler(this.btnDescargar_Click_1);
             // 
             // dtgShow
             // 
@@ -152,7 +153,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.lblSelectCita.Name = "lblSelectCita";
             this.lblSelectCita.Size = new System.Drawing.Size(140, 25);
             this.lblSelectCita.TabIndex = 6;
-            this.lblSelectCita.Text = "Seleccionar cita:";
             // 
             // btnSelect
             // 
@@ -169,14 +169,13 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnSelect.TabIndex = 5;
             this.btnSelect.Text = "Seleccionar";
             this.btnSelect.UseVisualStyleBackColor = false;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // cbCitas
             // 
             this.cbCitas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCitas.Enabled = false;
             this.cbCitas.FormattingEnabled = true;
-            this.cbCitas.Items.AddRange(new object[] {"Cita1", "Cita2"});
+            this.cbCitas.Items.AddRange(new object[] {"Cita1", "Cita2", "Cita1", "Cita2"});
             this.cbCitas.Location = new System.Drawing.Point(217, 209);
             this.cbCitas.Margin = new System.Windows.Forms.Padding(4);
             this.cbCitas.Name = "cbCitas";
@@ -219,33 +218,32 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Numero de DUI:";
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(177, -4);
+            this.label1.Location = new System.Drawing.Point(169, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(473, 73);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Gestionar citas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmSeguimientoCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(944, 756);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmSeguimientoCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSeguimientoCita";
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
