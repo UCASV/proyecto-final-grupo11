@@ -24,35 +24,54 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private System.Windows.Forms.ComboBox cbCitas;
         private System.Windows.Forms.Button btnVerificar;
 
-        public frmSeguimientoCita()
+        private Employee employeeSelected { get; set; }
+        public frmSeguimientoCita(Employee employee)
         {
             InitializeComponent();
+            this.employeeSelected = employee;
         }
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
             var db = new CabinasDeVacunacionCovidDBContext();
             var formatoDUI = "^[0-9]{8}-[0-9]{1}$";
+<<<<<<< HEAD
 
 
             
 
+=======
+            
+//            if (textBox1.Text != " " && Regex.IsMatch(textBox1.Text, formatoDUI))
+>>>>>>> nestor
 
             if (txtDUI.Text != "" && Regex.IsMatch(txtDUI.Text, formatoDUI))
             {
 
                 var verification = db.Appointments
-                    .Include(i=> i.DuiPatientNavigation)
+                    .Include(i => i.DuiPatientNavigation)
                     .Where(i => i.DuiPatientNavigation.Dui.Equals(txtDUI.Text))
                     .ToList();
 
+<<<<<<< HEAD
 
+=======
+                //EL FORMATO ESTA CORRECTO PERO FALTA UNA VALIDACION MAS
+>>>>>>> nestor
                 MessageBox.Show("SIII", "Seguimiento de Cita", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-
+                cbCitas.DataSource = verification;
+                cbCitas.DisplayMember = "DateAppointment";
+                cbCitas.ValueMember = "Id";
+                cbCitas.Enabled = true;
+                btnSelect.Enabled = true;
                 if (verification.Count > 0)
                 {
+<<<<<<< HEAD
                     
+=======
+                    //cargarCita2();
+>>>>>>> nestor
                     cargarCita();
                     btnDescargar.Enabled = true;
                     btnEditar.Enabled = true;
@@ -62,27 +81,25 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     MessageBox.Show("Paciente no registrado", "Seguimiento de Cita", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
+<<<<<<< HEAD
 
 
+=======
+                
+                
+>>>>>>> nestor
                 /*if (Regex.IsMatch(txtDUI.Text, formatoDUI))
->>>>>>> backend
                 {
 
                     btnSelect.Enabled = true;
                     cbCitas.Enabled = true;
-<<<<<<< HEAD
-=======
-
->>>>>>> backend
                 }
                 else
                 {
                     MessageBox.Show("Formato de DUI incorrecto", "Seguimiento de Cita", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
-<<<<<<< HEAD
                 }
             }
-=======
                 }*/
                 
             }
@@ -125,7 +142,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-             frmAddVaccine win2 = new frmAddVaccine();
+            
+             frmAddVaccine win2 = new frmAddVaccine((int)cbCitas.SelectedValue,txtDUI.Text, employeeSelected);
               win2.ShowDialog();                      
         }
 
@@ -152,7 +170,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
                   btnDescargar.Enabled = true;
                   btnEditar.Enabled = true;
          }
-       
         }*/
 
 
@@ -162,6 +179,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
         }
 
         
+<<<<<<< HEAD
 
         private void createPDF()
         {
@@ -217,5 +235,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
         {
             createPDF();
         }
+=======
+>>>>>>> nestor
     }
 }
