@@ -124,7 +124,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
          if(cbCitas.SelectedItem == null){
              MessageBox.Show("Debe seleccionar una Cita", "Seguimiento de Cita", MessageBoxButtons.OK,
                  MessageBoxIcon.Information);
-         
          }
           //Si se selecciona cita 1 que se muestren datos de cita 1 desde la base de datos
          else if(cbCitas.SelectedItem == "Cita1")
@@ -143,7 +142,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
                   btnDescargar.Enabled = true;
                   btnEditar.Enabled = true;
          }
-       
         }*/
 
 
