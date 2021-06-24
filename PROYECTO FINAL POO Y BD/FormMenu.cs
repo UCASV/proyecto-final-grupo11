@@ -23,7 +23,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmSeguimientoCita win2 = new frmSeguimientoCita();
+            frmSeguimientoCita win2 = new frmSeguimientoCita(idEmployee);
             win2.ShowDialog();
             
         }
