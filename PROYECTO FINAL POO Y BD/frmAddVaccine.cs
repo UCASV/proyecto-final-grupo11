@@ -95,7 +95,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
                     db.Add(secondCite);
                     db.SaveChanges();
-                    MessageBox.Show($"Se actualizaron los horarios de llegada y de vacunación y, ya se encuentra creada la cita para su segunda dosis.", "Vacunación", MessageBoxButtons.OK,
+                    MessageBox.Show($"Se actualizaron los horarios de llegada, vacunación y ya se encuentra creada la cita para su segunda dosis.", "Vacunación", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);   
                 }
 
