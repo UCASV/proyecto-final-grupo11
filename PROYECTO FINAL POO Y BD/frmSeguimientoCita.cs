@@ -20,7 +20,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private System.Windows.Forms.Button btnDescargar;
         private System.Windows.Forms.DataGridView dtgShow;
         private System.Windows.Forms.Label lblSelectCita;
-        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Button btnVerificar;
 
         private Employee employeeSelected { get; set; }
@@ -36,9 +35,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             var formatoDUI = "^[0-9]{8}-[0-9]{1}$";
 
             
-//            if (textBox1.Text != " " && Regex.IsMatch(textBox1.Text, formatoDUI))
-
-
 
             if (txtDUI.Text != "" && Regex.IsMatch(txtDUI.Text, formatoDUI))
             {
@@ -48,17 +44,14 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     .Where(i => i.DuiPatientNavigation.Dui.Equals(txtDUI.Text))
                     .ToList();
                 
-                btnSelect.Enabled = true;
+                
                 if (verification.Count > 0)
                 {
-                  
                     
-
                     cargarCita();
                     btnDescargar.Enabled = true;
                     btnEditar.Enabled = true;
                     txtDescargarCita.Visible = true;
-                    btnSelect.Visible = true;
                     label3.Visible = true;
                 }
                 else
@@ -66,23 +59,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                     MessageBox.Show("Paciente no registrado", "Seguimiento de Cita", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
-
                 
-                
-
-                /*if (Regex.IsMatch(txtDUI.Text, formatoDUI))
-                {
-
-                    btnSelect.Enabled = true;
-                    cbCitas.Enabled = true;
-                }
-                else
-                {
-                    MessageBox.Show("Formato de DUI incorrecto", "Seguimiento de Cita", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                }
-            }
-                }*/
                 
             }
             else
@@ -106,11 +83,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 {
                     Numero_de_cita = x.Id,
                     Nombre = x.DuiPatientNavigation.NamePatient,
-                    txtDUI = x.DuiPatientNavigation.Dui,
+                    DUI = x.DuiPatientNavigation.Dui,
                     Telefono = x.DuiPatientNavigation.Telephone,
                     Direccion = x.DuiPatientNavigation.AddressPatient,
-                    Email = x.DuiPatientNavigation.Mail,
-                    Fecha_cita = x.DateAppointment,
+                    Email = x.DuiPatientNavigation.Mail,              
+                    Fecha_cita = Convert.ToDateTime(x.DateAppointment.ToString()).ToString("yyyy-MM-dd"),
                     Hora_cita = x.HourAppointment,
                     Hora_llegada = x.HourArrival,
                     Hora_vacuna = x.HourVaccine,
@@ -124,48 +101,22 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            
-            // frmAddVaccine win2 = new frmAddVaccine((int)cbCitas.SelectedValue,txtDUI.Text, employeeSelected);
-             // win2.ShowDialog();                      
+             int id = Convert.ToInt32(txtDescargarCita.Text);
+             frmAddVaccine win2 = new frmAddVaccine(id,txtDUI.Text, employeeSelected);
+             win2.ShowDialog();                      
         }
 
-        /*private void btnSelect_Click(object sender, EventArgs e)
-        {
-         if(cbCitas.SelectedItem == null){
-             MessageBox.Show("Debe seleccionar una Cita", "Seguimiento de Cita", MessageBoxButtons.OK,
-                 MessageBoxIcon.Information);
-         }
-          //Si se selecciona cita 1 que se muestren datos de cita 1 desde la base de datos
-         else if(cbCitas.SelectedItem == "Cita1")
-         {
-                     MessageBox.Show("Se selecciono Cita 1", "Seguimiento de Cita", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                     btnDescargar.Enabled = true;
-                     btnEditar.Enabled = true;
-         }
-                   //Si se selecciona cita 2 que se muestren datos de cita 1 desde la base de datos
-         else
-         {
-             MessageBox.Show("Se selecciono Cita 2", "Seguimiento de Cita", MessageBoxButtons.OK,
-                 MessageBoxIcon.Information);
-                 
-                  btnDescargar.Enabled = true;
-                  btnEditar.Enabled = true;
-         }
-        }*/
-
-
+        
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         
-
-
-        private void createPDF()
+        
+        private void createPDF(string directory)
         {
-            PdfWriter pdfAppo = new PdfWriter("Reporte_cita.pdf");
+            PdfWriter pdfAppo = new PdfWriter(directory);
             PdfDocument pdf = new PdfDocument(pdfAppo);
             Document document = new Document(pdf, PageSize.LETTER);
 
@@ -181,10 +132,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
             table.SetWidth(UnitValue.CreatePercentValue(100));
             
             var db = new CabinasDeVacunacionCovidDBContext();
+            int idCita = Convert.ToInt32(txtDescargarCita.Text);
             var list = db.Appointments
                 .Include(i => i.DuiPatientNavigation)
                 .Include(i=> i.IdCabinNavigation)
-                .Where(i=> i.DuiPatientNavigation.Dui.Equals(txtDUI.Text))
+                .Where(i=> i.DuiPatientNavigation.Dui.Equals(txtDUI.Text) && i.Id.Equals(idCita))
                 .Select(x => new
                 {
                     Numero_de_cita = x.Id,
@@ -198,6 +150,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
             string dateOne = list[0].Fecha_cita.ToString();
             string date = dateOne.Substring(0, 10);
+
+            
             foreach (string col in cols)
             {
                 table.AddHeaderCell(new Cell().Add(new Paragraph(col).SetFont(fontCols)));
@@ -207,16 +161,26 @@ namespace PROYECTO_FINAL_POO_Y_BD
             table.AddCell(new Cell().Add(new Paragraph(date.ToString()).SetFont(fontCols)));
             table.AddCell(new Cell().Add(new Paragraph(list[0].Hora_cita.ToString()).SetFont(fontCols)));
             table.AddCell(new Cell().Add(new Paragraph(list[0].Direccion.ToString()).SetFont(fontCols)));
-            
+
+
             document.Add(table);
             document.Close();
-
+            
         }
 
         private void btnDescargar_Click_1(object sender, EventArgs e)
         {
-            createPDF();
+            
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "texto (*.pdf)|*pdf|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string directory = saveFileDialog1.FileName;
+                createPDF(directory);
+            }
+ 
         }
-
     }
 }

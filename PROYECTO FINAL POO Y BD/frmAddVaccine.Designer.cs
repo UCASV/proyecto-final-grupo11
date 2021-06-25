@@ -34,7 +34,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddVaccine));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtHoraLlegada = new System.Windows.Forms.TextBox();
@@ -44,8 +43,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.dtFechaVacuna = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtDUI = new System.Windows.Forms.TextBox();
-            this.btnVerificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
@@ -73,19 +70,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Turquoise;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(16, 137);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 21);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Digitar DUI:";
             // 
             // label1
             // 
@@ -117,7 +101,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             // txtHoraLlegada
             // 
-            this.txtHoraLlegada.Enabled = false;
             this.txtHoraLlegada.Location = new System.Drawing.Point(185, 320);
             this.txtHoraLlegada.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraLlegada.Name = "txtHoraLlegada";
@@ -137,7 +120,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             // txtHoraVacuna
             // 
-            this.txtHoraVacuna.Enabled = false;
             this.txtHoraVacuna.Location = new System.Drawing.Point(185, 399);
             this.txtHoraVacuna.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraVacuna.Name = "txtHoraVacuna";
@@ -146,7 +128,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             // dtFechaLlegada
             // 
-            this.dtFechaLlegada.Enabled = false;
             this.dtFechaLlegada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaLlegada.Location = new System.Drawing.Point(19, 320);
             this.dtFechaLlegada.Margin = new System.Windows.Forms.Padding(4);
@@ -156,7 +137,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             // dtFechaVacuna
             // 
-            this.dtFechaVacuna.Enabled = false;
             this.dtFechaVacuna.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaVacuna.Location = new System.Drawing.Point(19, 399);
             this.dtFechaVacuna.Margin = new System.Windows.Forms.Padding(4);
@@ -181,7 +161,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Turquoise;
-            this.btnSave.Enabled = false;
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -195,31 +174,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // txtDUI
-            // 
-            this.txtDUI.Location = new System.Drawing.Point(13, 164);
-            this.txtDUI.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDUI.Name = "txtDUI";
-            this.txtDUI.Size = new System.Drawing.Size(229, 22);
-            this.txtDUI.TabIndex = 26;
-            // 
-            // btnVerificar
-            // 
-            this.btnVerificar.BackColor = System.Drawing.Color.Turquoise;
-            this.btnVerificar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnVerificar.FlatAppearance.BorderSize = 0;
-            this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnVerificar.ForeColor = System.Drawing.Color.White;
-            this.btnVerificar.Location = new System.Drawing.Point(265, 164);
-            this.btnVerificar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(96, 25);
-            this.btnVerificar.TabIndex = 27;
-            this.btnVerificar.Text = "Verificar";
-            this.btnVerificar.UseVisualStyleBackColor = false;
-            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
             // 
             // btnCancelar
             // 
@@ -244,8 +198,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 615);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnVerificar);
-            this.Controls.Add(this.txtDUI);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtFechaVacuna);
@@ -255,7 +207,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.Controls.Add(this.txtHoraLlegada);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -271,9 +222,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private System.Windows.Forms.Button btnCancelar;
 
         private System.Windows.Forms.Button button1;
-
-        private System.Windows.Forms.TextBox txtDUI;
-        private System.Windows.Forms.Button btnVerificar;
 
 
         private System.Windows.Forms.Button btnSave;
@@ -296,7 +244,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
 
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
 
         private System.Windows.Forms.PictureBox pictureBox2;

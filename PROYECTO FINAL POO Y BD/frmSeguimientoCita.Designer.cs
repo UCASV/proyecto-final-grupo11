@@ -41,7 +41,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnDescargar = new System.Windows.Forms.Button();
             this.dtgShow = new System.Windows.Forms.DataGridView();
             this.lblSelectCita = new System.Windows.Forms.Label();
-            this.btnSelect = new System.Windows.Forms.Button();
             this.btnVerificar = new System.Windows.Forms.Button();
             this.txtDUI = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -72,7 +71,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.panel1.Controls.Add(this.btnDescargar);
             this.panel1.Controls.Add(this.dtgShow);
             this.panel1.Controls.Add(this.lblSelectCita);
-            this.panel1.Controls.Add(this.btnSelect);
             this.panel1.Controls.Add(this.btnVerificar);
             this.panel1.Controls.Add(this.txtDUI);
             this.panel1.Controls.Add(this.label2);
@@ -87,19 +85,20 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(267, 570);
+            this.label3.Location = new System.Drawing.Point(229, 570);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(304, 23);
+            this.label3.Size = new System.Drawing.Size(362, 23);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Digite el numero de cita a descargar:";
+            this.label3.Text = "Digite el numero de cita a descargar o editar cita\r\n";
             this.label3.Visible = false;
+            
             // 
             // txtDescargarCita
             // 
-            this.txtDescargarCita.Location = new System.Drawing.Point(316, 597);
+            this.txtDescargarCita.Location = new System.Drawing.Point(310, 597);
             this.txtDescargarCita.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescargarCita.Name = "txtDescargarCita";
-            this.txtDescargarCita.Size = new System.Drawing.Size(205, 22);
+            this.txtDescargarCita.Size = new System.Drawing.Size(166, 22);
             this.txtDescargarCita.TabIndex = 11;
             this.txtDescargarCita.Visible = false;
             // 
@@ -176,23 +175,6 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.lblSelectCita.Size = new System.Drawing.Size(140, 25);
             this.lblSelectCita.TabIndex = 6;
             // 
-            // btnSelect
-            // 
-            this.btnSelect.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSelect.Enabled = false;
-            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (192)))), ((int) (((byte) (192)))));
-            this.btnSelect.FlatAppearance.BorderSize = 2;
-            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelect.ForeColor = System.Drawing.Color.White;
-            this.btnSelect.Location = new System.Drawing.Point(362, 627);
-            this.btnSelect.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(109, 30);
-            this.btnSelect.TabIndex = 5;
-            this.btnSelect.Text = "Seleccionar";
-            this.btnSelect.UseVisualStyleBackColor = false;
-            this.btnSelect.Visible = false;
-            // 
             // btnVerificar
             // 
             this.btnVerificar.BackColor = System.Drawing.Color.DodgerBlue;
@@ -203,7 +185,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnVerificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerificar.ForeColor = System.Drawing.Color.White;
-            this.btnVerificar.Location = new System.Drawing.Point(353, 133);
+            this.btnVerificar.Location = new System.Drawing.Point(327, 133);
             this.btnVerificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.Size = new System.Drawing.Size(127, 36);
@@ -214,7 +196,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             // txtDUI
             // 
-            this.txtDUI.Location = new System.Drawing.Point(316, 101);
+            this.txtDUI.Location = new System.Drawing.Point(288, 103);
             this.txtDUI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDUI.Name = "txtDUI";
             this.txtDUI.Size = new System.Drawing.Size(205, 22);
