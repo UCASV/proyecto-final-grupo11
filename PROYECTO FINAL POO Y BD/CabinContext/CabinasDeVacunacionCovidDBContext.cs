@@ -36,7 +36,7 @@ namespace PROYECTO_FINAL_POO_Y_BD.CabinContext
 
            
 
-                optionsBuilder.UseSqlServer("Server=LAPTOP-LK3IC2QB\\MSSQLSERVER03;Database=CabinasDeVacunacionCovidDB;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=YERVING;Database=CabinasDeVacunacionCovidDB;Trusted_Connection=True;");
 
             }
         }
