@@ -1,42 +1,21 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\jdp49\\OneDrive\\Escritorio\\proyec\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj": {}
+    "C:\\Users\\xxhac\\Desktop\\PROYECTO POO BD 2021\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jdp49\\OneDrive\\Escritorio\\proyec\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj": {
+    "C:\\Users\\xxhac\\Desktop\\PROYECTO POO BD 2021\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jdp49\\OneDrive\\Escritorio\\proyec\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+        "projectUniqueName": "C:\\Users\\xxhac\\Desktop\\PROYECTO POO BD 2021\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
         "projectName": "PROYECTO FINAL POO Y BD",
-        "projectPath": "C:\\Users\\jdp49\\OneDrive\\Escritorio\\proyec\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
-        "packagesPath": "C:\\Users\\jdp49\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jdp49\\OneDrive\\Escritorio\\proyec\\PROYECTO FINAL POO Y BD\\obj\\",
-=======
-    "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Prrrr\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Prrrr\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Prrrr\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
-        "projectName": "PROYECTO FINAL POO Y BD",
-        "projectPath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Prrrr\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Prrrr\\PROYECTO FINAL POO Y BD\\obj\\",
->>>>>>> nestor
+        "projectPath": "C:\\Users\\xxhac\\Desktop\\PROYECTO POO BD 2021\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+        "packagesPath": "C:\\Users\\xxhac\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xxhac\\Desktop\\PROYECTO POO BD 2021\\PROYECTO FINAL POO Y BD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\jdp49\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-=======
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\xxhac\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> nestor
         ],
         "originalTargetFrameworks": [
           "net5.0-windows"
@@ -106,7 +85,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

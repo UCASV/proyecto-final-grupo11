@@ -292,15 +292,14 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui.Equals(dui));
                 Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id.Equals(idEmployee.Id)); //Pasar el id del gestor desde el login para poder usarlo
                 
-<<<<<<< HEAD
+
                 
+              
+
+
                 var cita = new Appointment(dateForAppointment,horaCita,"pendiente","pendiente", patref, cabinref);
                 
 
-=======
-                var cita = new Appointment(dateForAppointment,horaCita,"pendiente","pendiente", patref, cabinref);
-                
->>>>>>> nestor
                 db.Add(cita);
                 db.SaveChanges();
                 MessageBox.Show($"Datos del paciente {patref.NamePatient} y primer cita, guardados con éxito, Revisar 'Citas'", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
