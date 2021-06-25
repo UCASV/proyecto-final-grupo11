@@ -25,7 +25,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             var LoginController = new LoginController();
             LoginController.CloseForm(textBox_username.Text, textBox_password.Text, this);
 
-            
+            ////////////////////////////
         }
     }
 }
