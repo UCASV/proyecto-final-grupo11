@@ -134,7 +134,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
         
         private void createPDF(string directory)
         {
-            PdfWriter pdfAppo = new PdfWriter(directory);
+            string direc = directory + ".pdf";
+            PdfWriter pdfAppo = new PdfWriter(direc);
             PdfDocument pdf = new PdfDocument(pdfAppo);
             Document document = new Document(pdf, PageSize.LETTER);
 
@@ -200,6 +201,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 saveFileDialog1.Filter = "texto (*.pdf)|*pdf|All files (*.*)|*.*";
                 saveFileDialog1.FilterIndex = 2;
                 saveFileDialog1.RestoreDirectory = true;
+                saveFileDialog1.FileName = "Cita.pdf";
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     string directory = saveFileDialog1.FileName;
