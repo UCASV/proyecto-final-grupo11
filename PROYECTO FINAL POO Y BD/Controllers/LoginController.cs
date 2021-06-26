@@ -30,7 +30,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             else
             {
                 var idEmployee = employeeFound[0].Id;
-                FormMenu window1 = new FormMenu(employeeFound[0]);
+                FormMenu window1 = new FormMenu(employeeFound[0], form1);
                 form1.Hide();
                 window1.Show();
             }

@@ -11,10 +11,12 @@ namespace PROYECTO_FINAL_POO_Y_BD
     public partial class frmProcesoCita : Form
     {
         public Employee idEmployee { get; set; }
-        public frmProcesoCita(Employee id)
+        private FormMenu _formMenu {get; set; }
+        public frmProcesoCita(Employee id, FormMenu menu)
         {
             InitializeComponent();
             this.idEmployee = id;
+            this._formMenu = menu;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -231,6 +233,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private void btnCancelarCita_Click(object sender, EventArgs e)
         {
+            _formMenu.Visible = true;
             this.Close();
         }
         
@@ -291,19 +294,19 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 
                 Patient patref = db.Set<Patient>().SingleOrDefault(c => c.Dui.Equals(dui));
                 Cabin cabinref = db.Set<Cabin>().SingleOrDefault(ca => ca.Id.Equals(idEmployee.Id)); //Pasar el id del gestor desde el login para poder usarlo
-                
-
-                
-              
-
 
                 var cita = new Appointment(dateForAppointment,horaCita,"pendiente","pendiente", patref, cabinref);
-                
-
+               
                 db.Add(cita);
                 db.SaveChanges();
                 MessageBox.Show($"Datos del paciente {patref.NamePatient} y primer cita, guardados con éxito, Revisar 'Citas'", "CITA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _formMenu.Visible = true;
                 this.Close();
+            }
+
+            private void frmProcesoCita_FormClosing(object sender, FormClosingEventArgs e)
+            {
+                _formMenu.Visible = true;
             }
     }
 }

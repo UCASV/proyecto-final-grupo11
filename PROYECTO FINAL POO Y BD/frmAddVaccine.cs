@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using Microsoft.EntityFrameworkCore;
 using PROYECTO_FINAL_POO_Y_BD.CabinContext;
 
 namespace PROYECTO_FINAL_POO_Y_BD
@@ -11,22 +12,33 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private int id_cita { get; set; }
         private string dui { get; set; }
         private Employee employeeSelected { get; set; }
-        public frmAddVaccine(int id_cita1, string dui1, Employee employee1)
+        private frmSeguimientoCita _frmSeguimientoCita { get; set;}
+        public frmAddVaccine(int id_cita1, string dui1, Employee employee1, frmSeguimientoCita seguimiento)
         {
             InitializeComponent();
             this.id_cita = id_cita1;
             this.dui = dui1;
             this.employeeSelected = employee1;
+            this._frmSeguimientoCita = seguimiento;
         }
 
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             var db = new CabinasDeVacunacionCovidDBContext();
+            string hourOneText = txtHoraLlegada.Text.Substring(0,2);
+            string hourTwoText = txtHoraVacuna.Text.Substring(0,2);;
+            int hourOne = Int32.Parse(hourOneText);
+            int hourTwo = Int32.Parse(hourTwoText);
             //SI LOS CAMPOS PARA EDITAR HORA ESTAN VACIOS NO DEJARA GUARDAR
             if (txtHoraLlegada.Text == "" || txtHoraVacuna.Text == "")
             {
                 MessageBox.Show("Verifique que los campos no esten vacios", "Vacunación", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else if ((hourOne > 17 || hourOne < 7) || (hourTwo > 17 || hourTwo < 7))
+            {
+                MessageBox.Show("Ingrese una hora entre las 07:00 y 17:00", "Vacunación", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
             else
@@ -85,7 +97,24 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            _frmSeguimientoCita.Visible = true;
             this.Close();
+        }
+
+        private void frmAddVaccine_Load(object sender, EventArgs e)
+        {
+            var db = new CabinasDeVacunacionCovidDBContext();
+            var data = db.Appointments
+                .Where(d => d.Id == id_cita && d.DuiPatientNavigation.Dui == dui)
+                .ToList();
+            
+            txtArrivalDate.Text = data[0].DateAppointment.ToString().Substring(0,10);
+            txtVaccineDate.Text = data[0].DateAppointment.ToString().Substring(0, 10);
+        }
+
+        private void frmAddVaccine_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _frmSeguimientoCita.Show();
         }
     }
 }

@@ -53,10 +53,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-321, -159);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(-241, -129);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1517, 976);
+            this.pictureBox1.Size = new System.Drawing.Size(1138, 793);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -75,30 +74,29 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.panel1.Controls.Add(this.txtDUI);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(72, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5);
+            this.panel1.Location = new System.Drawing.Point(54, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(783, 741);
+            this.panel1.Size = new System.Drawing.Size(587, 602);
             this.panel1.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(229, 570);
+            this.label3.Location = new System.Drawing.Point(172, 463);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(362, 23);
+            this.label3.Size = new System.Drawing.Size(272, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "Digite el numero de cita a descargar o editar cita\r\n";
             this.label3.Visible = false;
-            
             // 
             // txtDescargarCita
             // 
-            this.txtDescargarCita.Location = new System.Drawing.Point(310, 597);
-            this.txtDescargarCita.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescargarCita.Location = new System.Drawing.Point(232, 485);
             this.txtDescargarCita.Name = "txtDescargarCita";
-            this.txtDescargarCita.Size = new System.Drawing.Size(166, 22);
+            this.txtDescargarCita.Size = new System.Drawing.Size(126, 20);
             this.txtDescargarCita.TabIndex = 11;
             this.txtDescargarCita.Visible = false;
             // 
@@ -110,10 +108,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(32, 676);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(24, 549);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(205, 50);
+            this.btnCancelar.Size = new System.Drawing.Size(154, 41);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -128,10 +125,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(548, 676);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(411, 549);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(205, 50);
+            this.btnEditar.Size = new System.Drawing.Size(154, 41);
             this.btnEditar.TabIndex = 9;
             this.btnEditar.Text = "Editar cita";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -146,10 +142,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDescargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnDescargar.ForeColor = System.Drawing.Color.White;
-            this.btnDescargar.Location = new System.Drawing.Point(245, 674);
-            this.btnDescargar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDescargar.Location = new System.Drawing.Point(184, 548);
             this.btnDescargar.Name = "btnDescargar";
-            this.btnDescargar.Size = new System.Drawing.Size(293, 50);
+            this.btnDescargar.Size = new System.Drawing.Size(220, 41);
             this.btnDescargar.TabIndex = 8;
             this.btnDescargar.Text = "Descargar PDF";
             this.btnDescargar.UseVisualStyleBackColor = false;
@@ -159,20 +154,18 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             this.dtgShow.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dtgShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgShow.Location = new System.Drawing.Point(4, 210);
-            this.dtgShow.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgShow.Location = new System.Drawing.Point(3, 171);
             this.dtgShow.Name = "dtgShow";
-            this.dtgShow.Size = new System.Drawing.Size(779, 309);
+            this.dtgShow.Size = new System.Drawing.Size(584, 251);
             this.dtgShow.TabIndex = 7;
             // 
             // lblSelectCita
             // 
             this.lblSelectCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblSelectCita.ForeColor = System.Drawing.Color.White;
-            this.lblSelectCita.Location = new System.Drawing.Point(217, 181);
-            this.lblSelectCita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSelectCita.Location = new System.Drawing.Point(163, 147);
             this.lblSelectCita.Name = "lblSelectCita";
-            this.lblSelectCita.Size = new System.Drawing.Size(140, 25);
+            this.lblSelectCita.Size = new System.Drawing.Size(105, 20);
             this.lblSelectCita.TabIndex = 6;
             // 
             // btnVerificar
@@ -185,10 +178,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnVerificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerificar.ForeColor = System.Drawing.Color.White;
-            this.btnVerificar.Location = new System.Drawing.Point(327, 133);
-            this.btnVerificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVerificar.Location = new System.Drawing.Point(245, 108);
             this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(127, 36);
+            this.btnVerificar.Size = new System.Drawing.Size(95, 29);
             this.btnVerificar.TabIndex = 3;
             this.btnVerificar.Text = "Verificar";
             this.btnVerificar.UseVisualStyleBackColor = false;
@@ -196,48 +188,48 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // 
             // txtDUI
             // 
-            this.txtDUI.Location = new System.Drawing.Point(288, 103);
-            this.txtDUI.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDUI.Location = new System.Drawing.Point(216, 84);
             this.txtDUI.Name = "txtDUI";
-            this.txtDUI.Size = new System.Drawing.Size(205, 22);
+            this.txtDUI.Size = new System.Drawing.Size(155, 20);
             this.txtDUI.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(353, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(265, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 25);
+            this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(186, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(140, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(473, 73);
+            this.label1.Size = new System.Drawing.Size(355, 59);
             this.label1.TabIndex = 0;
             this.label1.Text = "Seguimiento de Cita";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmSeguimientoCita
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(944, 756);
+            this.ClientSize = new System.Drawing.Size(708, 614);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Location = new System.Drawing.Point(15, 15);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmSeguimientoCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Citas";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSeguimientoCita_FormClosed);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

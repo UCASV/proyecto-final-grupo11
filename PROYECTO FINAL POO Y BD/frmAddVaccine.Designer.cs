@@ -39,11 +39,11 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.txtHoraLlegada = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtHoraVacuna = new System.Windows.Forms.TextBox();
-            this.dtFechaLlegada = new System.Windows.Forms.DateTimePicker();
-            this.dtFechaVacuna = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtArrivalDate = new System.Windows.Forms.TextBox();
+            this.txtVaccineDate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
@@ -52,10 +52,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -44);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -36);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1027, 703);
+            this.pictureBox1.Size = new System.Drawing.Size(770, 571);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -63,10 +62,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-3, -2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(-2, -2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(517, 618);
+            this.pictureBox2.Size = new System.Drawing.Size(388, 502);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -77,10 +75,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 278);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 226);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(329, 25);
+            this.label1.Size = new System.Drawing.Size(247, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Fecha y hora de llegada";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,58 +88,40 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(16, 369);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 300);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(329, 26);
+            this.label3.Size = new System.Drawing.Size(247, 21);
             this.label3.TabIndex = 10;
             this.label3.Text = "Fecha y hora de vacuna";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtHoraLlegada
             // 
-            this.txtHoraLlegada.Location = new System.Drawing.Point(185, 320);
-            this.txtHoraLlegada.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHoraLlegada.Location = new System.Drawing.Point(139, 260);
+            this.txtHoraLlegada.MaxLength = 5;
             this.txtHoraLlegada.Name = "txtHoraLlegada";
-            this.txtHoraLlegada.Size = new System.Drawing.Size(159, 22);
+            this.txtHoraLlegada.Size = new System.Drawing.Size(120, 20);
             this.txtHoraLlegada.TabIndex = 12;
+            this.txtHoraLlegada.Text = "00:00";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(785, 6);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(589, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(205, 180);
+            this.pictureBox3.Size = new System.Drawing.Size(154, 146);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
             // 
             // txtHoraVacuna
             // 
-            this.txtHoraVacuna.Location = new System.Drawing.Point(185, 399);
-            this.txtHoraVacuna.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHoraVacuna.Location = new System.Drawing.Point(139, 324);
+            this.txtHoraVacuna.MaxLength = 5;
             this.txtHoraVacuna.Name = "txtHoraVacuna";
-            this.txtHoraVacuna.Size = new System.Drawing.Size(159, 22);
+            this.txtHoraVacuna.Size = new System.Drawing.Size(120, 20);
             this.txtHoraVacuna.TabIndex = 21;
-            // 
-            // dtFechaLlegada
-            // 
-            this.dtFechaLlegada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaLlegada.Location = new System.Drawing.Point(19, 320);
-            this.dtFechaLlegada.Margin = new System.Windows.Forms.Padding(4);
-            this.dtFechaLlegada.Name = "dtFechaLlegada";
-            this.dtFechaLlegada.Size = new System.Drawing.Size(157, 22);
-            this.dtFechaLlegada.TabIndex = 22;
-            // 
-            // dtFechaVacuna
-            // 
-            this.dtFechaVacuna.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaVacuna.Location = new System.Drawing.Point(19, 399);
-            this.dtFechaVacuna.Margin = new System.Windows.Forms.Padding(4);
-            this.dtFechaVacuna.Name = "dtFechaVacuna";
-            this.dtFechaVacuna.Size = new System.Drawing.Size(157, 22);
-            this.dtFechaVacuna.TabIndex = 23;
+            this.txtHoraVacuna.Text = "00:00";
             // 
             // label4
             // 
@@ -150,10 +129,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(-3, -2);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(-2, -2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(411, 98);
+            this.label4.Size = new System.Drawing.Size(308, 80);
             this.label4.TabIndex = 24;
             this.label4.Text = "Proceso de vacunación";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,10 +144,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(236, 465);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(177, 378);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(125, 41);
+            this.btnSave.Size = new System.Drawing.Size(94, 33);
             this.btnSave.TabIndex = 25;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -183,25 +160,40 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(60, 465);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(45, 378);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 41);
+            this.btnCancelar.Size = new System.Drawing.Size(94, 33);
             this.btnCancelar.TabIndex = 28;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // txtArrivalDate
+            // 
+            this.txtArrivalDate.Enabled = false;
+            this.txtArrivalDate.Location = new System.Drawing.Point(12, 260);
+            this.txtArrivalDate.Name = "txtArrivalDate";
+            this.txtArrivalDate.Size = new System.Drawing.Size(121, 20);
+            this.txtArrivalDate.TabIndex = 29;
+            // 
+            // txtVaccineDate
+            // 
+            this.txtVaccineDate.Enabled = false;
+            this.txtVaccineDate.Location = new System.Drawing.Point(12, 324);
+            this.txtVaccineDate.Name = "txtVaccineDate";
+            this.txtVaccineDate.Size = new System.Drawing.Size(121, 20);
+            this.txtVaccineDate.TabIndex = 30;
+            // 
             // frmAddVaccine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1007, 615);
+            this.ClientSize = new System.Drawing.Size(755, 500);
+            this.Controls.Add(this.txtVaccineDate);
+            this.Controls.Add(this.txtArrivalDate);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dtFechaVacuna);
-            this.Controls.Add(this.dtFechaLlegada);
             this.Controls.Add(this.txtHoraVacuna);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtHoraLlegada);
@@ -209,15 +201,24 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddVaccine";
-            this.Text = "frmAddVaccine";
+            this.Text = "Hora De Llegada Y Vacunación";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAddVaccine_FormClosed);
+            this.Load += new System.EventHandler(this.frmAddVaccine_Load);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.TextBox txtArrivalDate;
+
+        private System.Windows.Forms.TextBox txtVaccineDate;
+
+        private System.Windows.Forms.TextBox textBox2;
+
+        private System.Windows.Forms.TextBox textBox1;
 
         private System.Windows.Forms.Button btnCancelar;
 
@@ -226,11 +227,9 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private System.Windows.Forms.Button btnSave;
 
-        private System.Windows.Forms.DateTimePicker dtFechaVacuna;
         private System.Windows.Forms.Label label4;
 
         private System.Windows.Forms.TextBox txtHoraVacuna;
-        private System.Windows.Forms.DateTimePicker dtFechaLlegada;
 
         private System.Windows.Forms.TextBox txtHoraLlegada;
 

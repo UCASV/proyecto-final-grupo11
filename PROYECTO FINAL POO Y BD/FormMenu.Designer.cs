@@ -93,7 +93,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMenu";
-            this.Text = "FormMenu";
+            this.Text = "Menú";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMenu_FormClosing);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
         }

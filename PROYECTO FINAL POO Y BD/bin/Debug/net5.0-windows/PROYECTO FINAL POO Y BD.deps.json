@@ -13,8 +13,7 @@
           "Microsoft.EntityFrameworkCore.Design": "5.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
-          "itext7": "7.1.15",
-          "Microsoft.AnalysisServices": "15.0.0.0"
+          "itext7": "7.1.15"
         },
         "runtime": {
           "PROYECTO FINAL POO Y BD.dll": {}
@@ -1498,14 +1497,6 @@
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
         }
-      },
-      "Microsoft.AnalysisServices/15.0.0.0": {
-        "runtime": {
-          "Microsoft.AnalysisServices.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.32.50"
-          }
-        }
       }
     }
   },
@@ -2494,11 +2485,6 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
-    },
-    "Microsoft.AnalysisServices/15.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

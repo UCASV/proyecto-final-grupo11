@@ -23,10 +23,12 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private System.Windows.Forms.Button btnVerificar;
 
         private Employee employeeSelected { get; set; }
-        public frmSeguimientoCita(Employee employee)
+        FormMenu _formMenu {get;set;}
+        public frmSeguimientoCita(Employee employee, FormMenu menu)
         {
             InitializeComponent();
             this.employeeSelected = employee;
+            this._formMenu = menu;
         }
 
         private void btnVerificar_Click(object sender, EventArgs e)
@@ -101,9 +103,25 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-             int id = Convert.ToInt32(txtDescargarCita.Text);
-             frmAddVaccine win2 = new frmAddVaccine(id,txtDUI.Text, employeeSelected);
-             win2.ShowDialog();                      
+            int id = Convert.ToInt32(txtDescargarCita.Text);
+            var db = new CabinasDeVacunacionCovidDBContext();
+            int idAppointment = Int32.Parse(txtDescargarCita.Text);
+            var appointments1 = db.Appointments.
+                Where(c => c.Id == idAppointment && c.DuiPatientNavigation.Dui == txtDUI.Text)
+                .ToList();
+
+            if (appointments1.Count == 1)
+            { 
+                this.Visible = false;
+                frmAddVaccine win2 = new frmAddVaccine(id,txtDUI.Text, employeeSelected, this);
+                win2.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Esa cita no coincide con este paciente.", "Descarga de Cita", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+                                   
         }
 
         
@@ -170,17 +188,35 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private void btnDescargar_Click_1(object sender, EventArgs e)
         {
-            
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "texto (*.pdf)|*pdf|All files (*.*)|*.*";
-            saveFileDialog1.FilterIndex = 2;
-            saveFileDialog1.RestoreDirectory = true;
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            var db = new CabinasDeVacunacionCovidDBContext();
+            int idAppointment = Int32.Parse(txtDescargarCita.Text);
+            var appointments1 = db.Appointments.
+                Where(c => c.Id == idAppointment && c.DuiPatientNavigation.Dui == txtDUI.Text)
+                .ToList();
+
+            if (appointments1.Count == 1)
             {
-                string directory = saveFileDialog1.FileName;
-                createPDF(directory);
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "texto (*.pdf)|*pdf|All files (*.*)|*.*";
+                saveFileDialog1.FilterIndex = 2;
+                saveFileDialog1.RestoreDirectory = true;
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string directory = saveFileDialog1.FileName;
+                    createPDF(directory);
+                }
+
             }
- 
+            else
+            {
+                MessageBox.Show("Esa cita no coincide con este paciente.", "Descarga de Cita", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+            }
+        }
+
+        private void frmSeguimientoCita_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _formMenu.Visible = true;
         }
     }
 }
