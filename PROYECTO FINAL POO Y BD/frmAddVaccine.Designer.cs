@@ -201,6 +201,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "frmAddVaccine";
             this.Text = "Hora De Llegada Y Vacunación";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAddVaccine_FormClosed);

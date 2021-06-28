@@ -18,21 +18,18 @@ namespace PROYECTO_FINAL_POO_Y_BD
             this.idEmployee = id;
             this._formMenu = menu;
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-
+        
         private void btnVerificarDUI_Click(object sender, EventArgs e)
         {
-
+            var db = new CabinasDeVacunacionCovidDBContext();
+            var duiFound = db.Patients
+                .Where(d => d.Dui.Equals(txtDUI_Usuario.Text))
+                .ToList();
+            
             var formatoDUI = "^[0-9]{8}-[0-9]{1}$";
             if (Regex.IsMatch(txtDUI_Usuario.Text, formatoDUI) &&
                 (2021 - Convert.ToInt32(txtFechaNacimiento_Usuario.Text) > 17) && txtFechaNacimiento_Usuario.Text != " "
-                && txtDUI_Usuario.Text != " " && (2021 - Convert.ToInt32(txtFechaNacimiento_Usuario.Text) < 101))
+                && txtDUI_Usuario.Text != " " && (2021 - Convert.ToInt32(txtFechaNacimiento_Usuario.Text) < 101) && duiFound.Count != 1)
             {
                 //SI EL DUI ESTA CORRECTO Y LA FECHA TAMBIEN SE MUESTRAN LOS DEMAS ELEMENTOS
                 txtDUI_Usuario.Enabled = false;
@@ -44,7 +41,7 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 l3abel3.Visible = false;
 
                 //cargando combobox de los departamentos
-                var db = new CabinasDeVacunacionCovidDBContext();
+                
                 cmbDepartamento.DataSource = db.Departaments.ToList();
                 cmbDepartamento.DisplayMember = "Departament1";
                 cmbDepartamento.ValueMember = "Id";

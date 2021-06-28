@@ -26,22 +26,32 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private void btnSave_Click(object sender, EventArgs e)
         {
             var db = new CabinasDeVacunacionCovidDBContext();
-            string hourOneText = txtHoraLlegada.Text.Substring(0,2);
-            string hourTwoText = txtHoraVacuna.Text.Substring(0,2);;
+            string hourOneText = txtHoraLlegada.Text.Substring(0, 2);
+            string hourTwoText = txtHoraVacuna.Text.Substring(0, 2);
+            string hourThreeText = txtHoraLlegada.Text.Substring(3, 2);
+            string hourFourText = txtHoraVacuna.Text.Substring(3, 2);
             int hourOne = Int32.Parse(hourOneText);
             int hourTwo = Int32.Parse(hourTwoText);
+            int hourThree = Int32.Parse(hourThreeText);
+            int hourFour = Int32.Parse(hourFourText);
             //SI LOS CAMPOS PARA EDITAR HORA ESTAN VACIOS NO DEJARA GUARDAR
             if (txtHoraLlegada.Text == "" || txtHoraVacuna.Text == "")
             {
                 MessageBox.Show("Verifique que los campos no esten vacios", "Vacunación", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
-            else if ((hourOne > 17 || hourOne < 7) || (hourTwo > 17 || hourTwo < 7))
+            else if ((hourOne > 17 || hourOne < 7) || (hourTwo > 17 || hourTwo < 7) || (hourThree > 59) ||
+                     (hourFour > 59))
             {
-                MessageBox.Show("Ingrese una hora entre las 07:00 y 17:00", "Vacunación", MessageBoxButtons.OK,
+                MessageBox.Show("Ingrese una hora entre las 07:00 y 17:59", "Vacunación", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
-            else
+            else if ((hourOne > hourTwo) || (hourOne == hourTwo && hourThree > hourFour))
+            {
+                MessageBox.Show("Hora errónea", "Vacunación", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else 
             {
                 var appSelected = db.Appointments
                   .Where(u => u.Id.Equals(id_cita))
