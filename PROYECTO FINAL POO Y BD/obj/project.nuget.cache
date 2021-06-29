@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EsSh7pPuuxbUdln+/fHmoZOQXb1M7Mg6U5Xvg0Q52/c4t6YALs18FqhG8wHr/tNez+aD2k4FzEtm6jAJijcJxQ==",
+  "dgSpecHash": "k7aRJWE4IXHgdM8gyc+tuKQiyZBbuRhbHfnA6VARslaWpxSvkFTiPRo0tGA3DPgId2IZWXelsR9Yr8abC10y6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Prrrr\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto-Original\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\common.logging\\3.4.1\\common.logging.3.4.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\common.logging.core\\3.4.1\\common.logging.core.3.4.1.nupkg.sha512",

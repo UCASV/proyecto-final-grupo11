@@ -7828,11 +7828,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Prrrr\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto-Original\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
       "projectName": "PROYECTO FINAL POO Y BD",
-      "projectPath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Prrrr\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto-Original\\PROYECTO FINAL POO Y BD\\PROYECTO FINAL POO Y BD.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Prrrr\\PROYECTO FINAL POO Y BD\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\UCA - Material\\2021\\2021-CICLO-01\\03-PROGRAMACIÓN ORIENTADA A OBJETOS\\Proyecto-Original\\PROYECTO FINAL POO Y BD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

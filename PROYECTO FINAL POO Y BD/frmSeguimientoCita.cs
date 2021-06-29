@@ -160,7 +160,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 {
                     Numero_de_cita = x.Id,
                     Nombre = x.DuiPatientNavigation.NamePatient,
-                    Fecha_cita = x.DateAppointment,
+                    //Fecha_cita = x.DateAppointment,
+                    Fecha_cita = Convert.ToDateTime(x.DateAppointment.ToString()).ToString("yyyy-MM-dd"),
                     Hora_cita = x.HourAppointment,
                     Direccion = x.IdCabinNavigation.AddressCabin,
                 })
