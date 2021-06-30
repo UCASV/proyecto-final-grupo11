@@ -104,24 +104,34 @@ namespace PROYECTO_FINAL_POO_Y_BD
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtDescargarCita.Text);
+            
             var db = new CabinasDeVacunacionCovidDBContext();
-            int idAppointment = Int32.Parse(txtDescargarCita.Text);
-            var appointments1 = db.Appointments.
-                Where(c => c.Id == idAppointment && c.DuiPatientNavigation.Dui == txtDUI.Text)
-                .ToList();
-
-            if (appointments1.Count == 1)
-            { 
-                this.Visible = false;
-                frmAddVaccine win2 = new frmAddVaccine(id,txtDUI.Text, employeeSelected, this);
-                win2.ShowDialog();
+            if (String.IsNullOrEmpty(txtDescargarCita.Text))
+            {
+             MessageBox.Show("Ingrese un id de cita válida para editar", "Editar de Cita", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);   
             }
             else
             {
-                MessageBox.Show("Esa cita no coincide con este paciente.", "Descarga de Cita", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                int id = Convert.ToInt32(txtDescargarCita.Text);
+                int idAppointment = Int32.Parse(txtDescargarCita.Text);
+                var appointments1 = db.Appointments.
+                    Where(c => c.Id == idAppointment && c.DuiPatientNavigation.Dui == txtDUI.Text)
+                    .ToList();
+
+                if (appointments1.Count == 1)
+                { 
+                    this.Visible = false;
+                    frmAddVaccine win2 = new frmAddVaccine(id,txtDUI.Text, employeeSelected, this);
+                    win2.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Esa cita no coincide con este paciente.", "Editar de Cita", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
+            
                                    
         }
 
@@ -192,7 +202,14 @@ namespace PROYECTO_FINAL_POO_Y_BD
         private void btnDescargar_Click_1(object sender, EventArgs e)
         {
             var db = new CabinasDeVacunacionCovidDBContext();
-            int idAppointment = Int32.Parse(txtDescargarCita.Text);
+            if (String.IsNullOrEmpty(txtDescargarCita.Text))
+            {
+                MessageBox.Show("Ingrese un id de cita válida para editar.", "Descarga de Cita", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                int idAppointment = Int32.Parse(txtDescargarCita.Text);
             var appointments1 = db.Appointments.
                 Where(c => c.Id == idAppointment && c.DuiPatientNavigation.Dui == txtDUI.Text)
                 .ToList();
@@ -216,8 +233,8 @@ namespace PROYECTO_FINAL_POO_Y_BD
                 MessageBox.Show("Esa cita no coincide con este paciente.", "Descarga de Cita", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
             }
+            }
         }
-
         private void frmSeguimientoCita_FormClosed(object sender, FormClosedEventArgs e)
         {
             _formMenu.Visible = true;
